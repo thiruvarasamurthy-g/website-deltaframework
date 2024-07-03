@@ -93,7 +93,7 @@ input, select, textarea {
 		font-size: 13pt;
 		color: #696969;
 		font-weight: 300;
-		line-height: 2.25em;
+		line-height: 2em;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -297,7 +297,7 @@ input, select, textarea {
 		}
 
 		.row > .col-4 {
-			width: 33.33333%;
+			width: 50%;
 		}
 
 		.row > .off-4 {
@@ -1589,7 +1589,8 @@ input, select, textarea {
 		.image img {
 			display: block;
 			width: 100%;
-			border-radius: 8px;
+			border-radius: 4px;
+			padding: 0px 0px 0px 0px;
 		}
 
 		.image.fit {
@@ -2073,8 +2074,8 @@ input, select, textarea {
 
 	#banner {
 		position: relative;
-		padding: 4em;
-	}
+		padding: 2em;
+		}
 
 		#banner h2 {
 			font-size: 3.5em;
@@ -2083,7 +2084,7 @@ input, select, textarea {
 
 		#banner p {
 			font-size: 1.75em;
-			line-height: 1.35em;
+			line-height: 1.6em;
 			margin: 0;
 		}
 
