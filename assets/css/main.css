@@ -1451,6 +1451,7 @@ input, select, textarea {
 							padding-top: 40px;
 						}
 
+
 		}
 
 /* Section/Article */
@@ -2578,7 +2579,7 @@ input, select, textarea {
 				}
 
 					.box.feature .inner {
-						padding: 30px 15px 30px 15px;
+						padding: 30px 10px 30px 10px;
 					}
 
 					.box.feature p {
@@ -2656,8 +2657,8 @@ input, select, textarea {
 				}
 
 				#banner p {
-					font-size: 1.5em;
-					line-height: 1.5em;
+					font-size: 1.4em;
+					line-height: 1.6em;
 					margin: 0;
 				}
 
