@@ -21,11 +21,37 @@
 		#author:hover {
 			text-decoration: underline;
 		}
+
+		#image {
+			-webkit-animation: spin 1s linear infinite;
+			-moz-animation: spin 1s linear infinite;
+			animation: spin 4s linear infinite;
+		}
+
+		@-moz-keyframes spin {
+			100% {
+				-moz-transform: rotate(360deg);
+			}
+		}
+
+		@-webkit-keyframes spin {
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
 	</style>
 
 </head>
 
 <body class="is-preload homepage">
+
 	<div id="page-wrapper">
 
 		<!-- Header Content-->
@@ -51,8 +77,8 @@
 
 				<div class="row" style="align-items: flex-end;text-align: center; text-justify: inter-word;">
 					<div class="col-7dummy col-12-medium">
-						<img src="images/DeltaFramework.png" alt="" width="50" height="50"
-							style="margin-left: auto;  margin-right: auto;" />
+						<img id="image" style="" src="images/DeltaFramework.png" alt="" width="50" height="50" />
+
 						<h2>DeltaFramework</h2>
 						<p style="text-shadowdummy: 4px 5px 18px #ABB2B9;">
 							<b>
@@ -67,13 +93,9 @@
 					<div class="col-5 col-12-medium1" style="margin: auto;">
 						<ul>
 							<li>
-								<a href="https://www.thirufactory.com/2024/06/software-framework-deltaframework.html"
-									target="_blank" class="button large icon solid fa-arrow-circle-right">
-									More info
-								</a>
 							</li>
 						</ul>
-					</div>
+					</div> 
 
 				</div>
 			</div>
@@ -132,7 +154,8 @@
 									<h2>Performance Metrics</h2>
 									<p>
 										<b>
-											Delta Framework offers lots of built-in features along with high performance.
+											Delta Framework offers lots of built-in features along with high
+											performance.
 											The comparison result of different library versions.
 										</b>
 									</p>
@@ -168,17 +191,49 @@
 				</div>
 			</div>
 		</div>
+		
+		<!-- Banner Content-->
+		<div id="banner-wrapper">
+			<div id="banner" class="box container">
+
+				<div class="row" style="align-items: flex-end;text-align: center; text-justify: inter-word;">
+					<div class="col-7dummy col-12-medium">
+
+						<p style="text-shadowdummy: 4px 5px 18px #ABB2B9;">
+							<b>
+							For more information, please visit the official website of author Thiruvarasamurthy G at thirufactory.com
+							</b>
+						</p>
+
+					</div>
+
+					<div class="col-5 col-12-medium1" style="margin: auto;">
+						<ul>
+							<li>
+								<a href="https://www.thirufactory.com/2024/06/software-framework-deltaframework.html"
+									target="_blank" class="button large icon solid fa-arrow-circle-right">
+									More info
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
 
 		<!-- Footer Content -->
+		<br>
 		<div id="footer-wrapper">
 			<footer id="footer" class="container">
 				<div class="row">
-					<div class="col-12">
+						<div class="col-12">
 						<div id="copyright">
 							<ul class="menu">
 								<li>
 									Copyright &copy; DeltaFramework 2024 -
 									<script>document.write(new Date().getFullYear())</script><br>
+									Version: v9.0 Last Update: July 7, 2024<br>
 									All rights reserved
 								</li>
 							</ul>

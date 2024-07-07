@@ -97,13 +97,13 @@ input, select, textarea {
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-			-moz-animation: none !important;
+			/* -moz-animation: none !important;
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
 			animation: none !important;
 			-moz-transition: none !important;
 			-webkit-transition: none !important;
-			-ms-transition: none !important;
+			-ms-transition: none !important;*/
 			transition: none !important;
 		}
 
@@ -2546,7 +2546,7 @@ input, select, textarea {
 				width: 100%;
 				text-align: center;
 				font-size: 1.25em !important;
-				padding: 0.65em 0 !important;
+				padding: 0.4em 0 !important;
 			}
 
 				input[type="button"].icon,
@@ -2658,7 +2658,7 @@ input, select, textarea {
 				}
 
 				#banner p {
-					font-size: 1.45em;
+					font-size: 1.4em;
 					line-height: 1.55em;
 					margin: 0;
 				}
