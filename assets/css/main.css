@@ -1,6 +1,37 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800");
 
+#author {
+			text-decoration: none;
+			color: #696969
+		}
+#author:hover {
+			text-decoration: underline;
+		}
+#image {
+			-webkit-animation: spin 1s linear infinite;
+			-moz-animation: spin 1s linear infinite;
+			animation: spin 4s linear infinite;
+		}
+@-moz-keyframes spin {
+			100% {
+				-moz-transform: rotate(360deg);
+			}
+		}
+
+@-webkit-keyframes spin {
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+@keyframes spin {
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+}
+		
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
