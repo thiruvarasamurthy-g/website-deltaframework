@@ -15,15 +15,12 @@
     <meta property="og:url" content="https://www.deltaframework.net" />
 
     <meta charset="utf-8" />
-    <meta name="description"
-          content="A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects.">
+    <meta name="description" content="A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects.">
     <meta name="keywords" content="Delta, Delta Framework, .NET, Library, NuGet, Thiruvarasamurthy G">
     <meta name="author" content="Thiruvarasamurthy G">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="image/x-icon" href="images/DeltaFramework.png">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYGHJ6X08E"></script>
     <script>
@@ -33,56 +30,29 @@
         gtag('config', 'G-VYGHJ6X08E');
     </script>
 
-    <style>
-        .fa {
-            padding: 10px;
-            font-size: 25px;
-            text-align: center;
-            text-decoration: none;
-            margin: 5px 8px;
-            border-radius: 50%;
-        }
-
-            .fa:hover {
-                opacity: 0.7;
-            }
-
-        .fa-whatsapp {
-            background: #25D366;
-            color: white;
-        }
-
-        .fa-telegram {
-            background: #0088cc;
-            color: white;
-        }
-
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
-        }
-
-        .fa-twitter {
-            background: #55ACEE;
-            color: white;
-        }
-
-        .fa-linkedin {
-            background: #007bb5;
-            color: white;
-        }
-
-        .fa-youtube {
-            background: #bb0000;
-            color: white;
-        }
-
-        .fa-skype {
-            background: #00aff0;
-            color: white;
-        }
-    </style>
-
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script>
+        $(function () {
+            $("a.hidelink").each(function (index, element) {
+                var href = $(this).attr("href");
+                $(this).attr("varhidelink", href);
+                $(this).removeAttr("href");
+            });
+            $("a.hidelink").click(function () {
+                url = $(this).attr("varhidelink");
+                window.open(url, '_blank');
+            });
+            $("a.hidelinkself").each(function (index, element) {
+                var href = $(this).attr("href");
+                $(this).attr("varhidelinkself", href);
+                $(this).removeAttr("href");
+            });
+            $("a.hidelinkself").click(function () {
+                url1 = $(this).attr("varhidelinkself");
+                window.open(url1, '_self');
+            })
+        });
+    </script>
 </head>
 <body class="is-preload homepage">
     <div id="page-wrapper">
@@ -288,19 +258,18 @@
                     <div class="col-5-dummy col-12-medium-dummy" style="margin: auto;">
                         <ul>
                             <li>
-                                <a class="fa fa-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=DeltaFramework: A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects Author: Thiruvarasamurthy G:+https://www.deltaframework.net"></a>
-                                <a class="fa fa-telegram" target="_blank" href="https://telegram.me/share/url?url=https://www.deltaframework.net&text=DeltaFramework: A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects Author: Thiruvarasamurthy G"></a>
-                                <a class="fa fa-skype" target="_blank" href="https://web.skype.com/share?url=https://www.deltaframework.net&text=DeltaFramework: A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects Author: Thiruvarasamurthy G"></a>
-                                <a class="fa fa-linkedin" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.deltaframework.net"></a>
-                                <a class="fa fa-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.deltaframework.net"></a>
-                                <a class="fa fa-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=DeltaFramework: A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects Author: Thiruvarasamurthy G&url=https://www.deltaframework.net"></a>
+                                <a title="WhatsApp" class="fa fa-whatsapp hidelink" target="_blank" href="https://api.whatsapp.com/send?text=DeltaFramework: A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects Author: Thiruvarasamurthy G:+https://www.deltaframework.net"></a>
+                                <a title="Telegram" class="fa fa-telegram hidelink" target="_blank" href="https://telegram.me/share/url?url=https://www.deltaframework.net&text=DeltaFramework: A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects Author: Thiruvarasamurthy G"></a>
+                                <a title="Skype" class="fa fa-skype hidelink" target="_blank" href="https://web.skype.com/share?url=https://www.deltaframework.net&text=DeltaFramework: A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects Author: Thiruvarasamurthy G"></a>
+                                <a title="Linkedin" class="fa fa-linkedin hidelink" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.deltaframework.net"></a>
+                                <a title="Facebook" class="fa fa-facebook hidelink" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.deltaframework.net"></a>
+                                <a title="X (Twitter)" class="fa fa-twitter hidelink" target="_blank" href="https://twitter.com/intent/tweet?text=DeltaFramework: A cutting-edge, modern, and robust software creation suite. The advanced Architecture Guidelines, Frameworks, Libraries, and Project Templates will accelerate the projects Author: Thiruvarasamurthy G&url=https://www.deltaframework.net"></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Footer Content -->
         <br>
         <div id="footer-wrapper">
@@ -312,9 +281,9 @@
                                 <li>
                                     Copyright &copy; DeltaFramework 2024 -
                                     <script>document.write(new Date().getFullYear())</script><br>
-                                    Version: v13.0 Last Update: July 11, 2024<br>
+                                    Version: v14.0 Last Update: July 11, 2024<br>
                                     All rights reserved<br>
-                                    <a href="#">
+                                    <a class="hidelinkself" href="#">
                                         <img src="images/TechIcon/TopEyecon.png" alt="TopEyecon" width="30" height="30">
                                     </a>
                                 </li>
