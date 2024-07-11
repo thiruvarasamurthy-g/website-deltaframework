@@ -41,7 +41,7 @@
 	font-size: 28px;
 	text-align: center;
 	text-decoration: none;
-	margin: 5px 5px;
+	margin: 5px 5px 5px 5px;
 	border-radius: 15%;
 	width: 38px;
 }
@@ -237,7 +237,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.40em;
+	font-size: 1.35em;
 	margin: 0 0 1em 0;
 }
 
@@ -1880,7 +1880,7 @@ ul.menu {
 		}
 
 		.box.feature h2 {
-			font-size: 1.35em;
+			font-size: 1.50em;
 		}
 
 		.box.feature p {
