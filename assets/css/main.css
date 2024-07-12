@@ -278,7 +278,7 @@ blockquote {
 }
 
 p, ul, ol, dl, table {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 /* Container */
@@ -2214,7 +2214,7 @@ ul.menu {
 
 #copyright {
 	color: #696969;
-	padding: 2em 0 0 0;
+	padding: 0 0 0 0;
 	text-align: center;
 	font-weight: 600;
 }
