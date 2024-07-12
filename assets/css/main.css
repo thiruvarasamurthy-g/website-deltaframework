@@ -36,6 +36,19 @@
 	}
 }
 
+.prevent-select {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.prevent-pointer-events {
+	pointer-events: none;
+}
+
 .fa {
 	padding: 7px;
 	font-size: 28px;
@@ -111,6 +124,11 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	scroll-behavior: smooth;
+}
+
+img {
+	pointer-events: none;
+	-webkit-touch-callout: none;
 }
 
 article, aside, details, figcaption, figure,
@@ -1672,6 +1690,8 @@ table {
 .image {
 	display: inline-block;
 	outline: 0;
+	pointer-events: none;
+	-webkit-touch-callout: none;
 }
 
 	.image img {
@@ -1679,6 +1699,8 @@ table {
 		width: 100%;
 		border-radius: 4px;
 		padding: 0px 0px 0px 0px;
+		pointer-events: none;
+		-webkit-touch-callout: none;
 	}
 
 	.image.fit {
@@ -1705,6 +1727,8 @@ table {
 		.image.centered img {
 			margin: 0 auto;
 			width: auto;
+			pointer-events: none;
+			-webkit-touch-callout: none;
 		}
 
 /* Button */
@@ -1896,6 +1920,8 @@ ul.menu {
 			.box.feature .image img {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
+				pointer-events: none;
+				-webkit-touch-callout: none;
 			}
 
 /* Icons */
@@ -2679,6 +2705,8 @@ ul.menu {
 				.box.feature .image img {
 					border-bottom-left-radius: 0;
 					border-bottom-right-radius: 0;
+					pointer-events: none;
+					-webkit-touch-callout: none;
 				}
 
 	/* Widgets */
