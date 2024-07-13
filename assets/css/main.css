@@ -49,60 +49,22 @@
 	pointer-events: none;
 }
 
-.fa {
-	padding: 7px;
-	font-size: 28px;
+.sharebutton {
+	padding: 1px;
 	text-align: center;
 	text-decoration: none;
-	margin: 5px 3px 5px 3px;
-	border-radius: 15%;
+	margin: 5px 1px 5px 1px;
+	border-radius: 0%;
+	height: 40px;
 	width: 38px;
+	display: inline-flex;
+	justify-content: center;
 }
 
-.fa:hover {
+.sharebutton:hover {
 	opacity: 1.0;
 }
 
-.fa-copy {
-	background: #3498DB;
-	color: white;
-}
-
-.fa-whatsapp {
-	background: #25D366;
-	color: white;
-}
-
-.fa-telegram {
-	background: #0088cc;
-	color: white;
-	font-size: 28px;
-}
-
-.fa-facebook {
-	background: #3B5998;
-	color: white;
-}
-
-.fa-twitter {
-	background: #55ACEE;
-	color: white;
-}
-
-.fa-linkedin {
-	background: #007bb5;
-	color: white;
-}
-
-.fa-youtube {
-	background: #bb0000;
-	color: white;
-}
-
-.fa-skype {
-	background: #00aff0;
-	color: white;
-}
 
 a.hidelink {
 	cursor: pointer;
