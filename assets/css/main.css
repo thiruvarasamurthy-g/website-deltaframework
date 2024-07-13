@@ -54,13 +54,18 @@
 	font-size: 28px;
 	text-align: center;
 	text-decoration: none;
-	margin: 5px 5px 5px 5px;
+	margin: 5px 3px 5px 5px;
 	border-radius: 15%;
-	width: 38px;
+	width: 40px;
 }
 
 .fa:hover {
 	opacity: 1.0;
+}
+
+.fa-copy {
+	background: #3498DB;
+	color: white;
 }
 
 .fa-whatsapp {
@@ -71,6 +76,7 @@
 .fa-telegram {
 	background: #0088cc;
 	color: white;
+	font-size: 28px;
 }
 
 .fa-facebook {
