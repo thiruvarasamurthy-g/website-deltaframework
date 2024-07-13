@@ -54,9 +54,9 @@
 	font-size: 28px;
 	text-align: center;
 	text-decoration: none;
-	margin: 5px 3px 5px 5px;
+	margin: 5px 3px 5px 3px;
 	border-radius: 15%;
-	width: 40px;
+	width: 38px;
 }
 
 .fa:hover {
