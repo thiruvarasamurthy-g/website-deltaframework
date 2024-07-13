@@ -50,15 +50,16 @@
 }
 
 .sharebutton {
-	padding: 1px;
+	padding: 0px;
 	text-align: center;
 	text-decoration: none;
-	margin: 5px 1px 5px 1px;
+	margin: 5px 3px 5px 3px;
 	border-radius: 0%;
 	height: 40px;
 	width: 38px;
 	display: inline-flex;
 	justify-content: center;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .sharebutton:hover {
