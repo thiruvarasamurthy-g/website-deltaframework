@@ -49,6 +49,16 @@
 	pointer-events: none;
 }
 
+.bannerimage {
+	padding: 0px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 0%;
+	display: inline-flex;
+	justify-content: center;
+	-webkit-tap-highlight-color: transparent;
+}
+
 .sharebutton {
 	padding: 0px;
 	text-align: center;
@@ -64,6 +74,11 @@
 
 .sharebutton:hover {
 	opacity: 1.0;
+}
+
+.sharebutton:active {
+
+	opacity: 0.75;
 }
 
 
