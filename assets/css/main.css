@@ -4,7 +4,7 @@
 
 #author {
 	text-decoration: none;
-	color: #696969
+	color: #4c4848
 }
 
 	#author:hover {
@@ -81,13 +81,28 @@
 	opacity: 0.75;
 }
 
-
 a.hidelink {
 	cursor: pointer;
 }
 
 a.hidelinkself {
 	cursor: pointer;
+}
+
+.glow_background {
+	animation: glow .9s infinite alternate;
+}
+
+@keyframes glow {
+	to {
+		text-shadow: 0 0 15px pink;
+	}
+}
+
+.glow_background {
+	font-family: sans-serif;
+	font-size: 36px;
+	font-weight: bold;
 }
 
 html, body, div, span, applet, object,
@@ -182,6 +197,8 @@ body {
 	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
 	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
 	background-image: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-color: #f7f7f7;
 	background-position: top left, top left;
 	background-repeat: repeat-x, repeat;
@@ -2223,7 +2240,7 @@ ul.menu {
 	}
 
 #copyright {
-	color: #696969;
+	color: #4c4848;
 	padding: 0 0 0 0;
 	text-align: center;
 	font-weight: 600;
