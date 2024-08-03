@@ -6,6 +6,7 @@
     text-decoration: none;
     color: #ffffff;
     text-shadow: 4px 4px 8px #131313;
+    -webkit-tap-highlight-color: transparent;
 }
 
     #author:hover {
