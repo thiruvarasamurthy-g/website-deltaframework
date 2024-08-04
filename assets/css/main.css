@@ -2049,7 +2049,7 @@ ul.menu {
 
 #logo {
     display: inline-block;
-    padding: 30px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
 }
 
     #logo h1 {
@@ -2059,7 +2059,7 @@ ul.menu {
         border-radius: 6px;
         font-family: 'Oleo Script', serif;
         font-weight: 400;
-        padding: 0.25em 0.2em 0.25em 0.2em;
+        padding: 0.25em 0.2em 0.15em 0.2em;
         font-size: 4.25em;
         letter-spacing: 0.05em;
         display: inline-block;
@@ -2188,9 +2188,13 @@ ul.menu {
 
 /* Banner */
 
+#banner-fixed {
+    padding: 0em 0em 8em 0em;
+}
+
 #banner {
     position: relative;
-    padding: 2em;
+    padding: 2em 2em 2em 2em;
 }
 
     #banner h2 {
@@ -2392,8 +2396,12 @@ ul.menu {
 
     /* Banner */
 
+    #banner-fixed {
+        padding: 0em 0em 7.5em 0em;
+    }
+
     #banner {
-        padding: 4.5em 3em;
+        padding: 3em 1em 3em 1em;
         text-align: center;
     }
 
@@ -2759,6 +2767,10 @@ ul.menu {
     }
 
     /* Banner */
+
+    #banner-fixed {
+        padding: 0em 0em 6.8em 0em;
+    }
 
     #banner {
         text-align: center;
