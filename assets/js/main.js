@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             image: "images/WishesIcon/WISH.png",
             message: "Happy Birtyday Author!"
         },
-        "08-25": {
+        "08-21": {
             image: "images/WishesIcon/WISH.png",
             message: "Belated Happy Birtyday Author!"
         },
