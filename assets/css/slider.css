@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5vh;
+    background: #fff no-repeat center;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 70px 55px;
+}
+
+.card-list .card-item {
+    height: auto;
+    color: #fff;
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    backdrop-filter: blur(30px);
+    background: #1a4997;
+    background-image: linear-gradient(#1c6dac,#1a4997);
+    border: 1px solid #134899;
+}
+
+    .card-list .card-item .card-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 10%;
+        margin-bottom: 40px;
+        border: 3px solid #fff;
+        padding: 4px;
+    }
+
+    .card-list .card-item .card-profession {
+        font-size: 1.15rem;
+        color: #e3e3e3;
+        font-weight: 500;
+        margin: 14px 0 40px;
+    }
+
+    .card-list .card-item .message-button {
+        font-size: 1.25rem;
+        padding: 10px 35px;
+        color: #030728;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+        background: #fff;
+        border: 1px solid transparent;
+        transition: 0.2s ease;
+    }
+
+        .card-list .card-item .message-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+.slider-wrapper .swiper-pagination-bullet {
+    background: #0e68dc;
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.slider-wrapper .swiper-slide-button {
+    color: #0e68dc;
+    margin-top: -55px;
+    transition: 0.2s ease;
+}
+
+    .slider-wrapper .swiper-slide-button:hover {
+        color: #4658ff;
+    }
+
+.card-item-new-message {
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 500;
+    margin: 14px 0 40px;
+}
+
+@media (max-width: 768px) {
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+
+        .slider-wrapper .swiper-slide-button {
+            display: none;
+        }
+}

@@ -31,8 +31,11 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="image/x-icon" href="images/DeltaFramework.png">
 
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="assets/javascripts/deltaframeworkmain.js"></script>
+    <script src="assets/js/deltaframeworkmain.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYGHJ6X08E"></script>
     <!--<script>
         window.dataLayer = window.dataLayer || [];
@@ -70,7 +73,7 @@
                         <div id="WishesPanel" style="margin:0px;" class="col-7dummy col-12-medium">
 
                             <a title="WishesPanelImage" class="bannerimage hidelinkself">
-                                <img id="WishesPanelImage" style="pointer-events:none;border-radius:10px" src="images/DeltaFramework.png" alt="" width="100" height="100" "           />
+                                <img id="WishesPanelImage" style="pointer-events:none;border-radius:10px" src="images/DeltaFramework.png" alt="" width="100" height="100" "                       />
                             </a>
                             <h4 style="text-shadow: 10px 5px 10px #4cff00; margin: 0px;">
                                 <span id="WishesPanelMessage"> Happy New Year to Thiruvarasamurthy</span>
@@ -376,15 +379,35 @@
             <div id="banner" class="box container">
                 <div class="row" style="align-items: flex-end;text-align: center; text-justify: inter-word;">
                     <div class="col-7dummy col-12-medium">
-                        <h3 style="font-size: 1.50em;">
+                        <h3 style="font-size: 1.50em;margin:0">
                             News
                         </h3>
-                        <h4 style="text-align:center;text-shadow: 1px 1px 1px #f3f3f3;">
-                            <b>
-                                DeltaFramework v3.0.0 is released. <br>
-                                DeltaFramework v4.0.0 is in progress with lots of new capabilities.
-                            </b>
-                        </h4>
+                        <br>
+                        <div class="slider-panel">
+                            <div class="container swiper">
+                                <div class="slider-wrapper">
+                                    <div class="card-list swiper-wrapper">
+                                        <div class="card-item swiper-slide">
+                                            <p class="card-item-new-message">DeltaFramework v3.0.0 is released</p>
+                                        </div>
+                                        <div class="card-item swiper-slide">
+                                            <p class="card-item-new-message">DeltaFramework v4.0.0 work is in progress</p>
+                                        </div>
+                                        <div class="card-item swiper-slide">
+                                            <p class="card-item-new-message">.NET 9 Migration</p>
+                                        </div>
+                                        <div class="card-item swiper-slide">
+                                            <p class="card-item-new-message">.NET Aspire Integration</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-pagination" style="font:1px"></div>
+                                    <div class="swiper-slide-button swiper-button-prev" style="font:1px"></div>
+                                    <div class="swiper-slide-button swiper-button-next" style="font:1px"></div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -433,6 +456,61 @@
             </div>
         </div>
         <br>
+
+        <!--<div class="slider-panel">
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-item swiper-slide">-->
+        <!--<img src="images/img-1.jpg" alt="card Image" class="card-image">-->
+        <!--<h2 class="card-name">--><!--James Wilson-->
+        <!--</h2>
+        <p class="card-profession">Software Developer</p>-->
+        <!--<button class="message-button">Message</button>-->
+        <!--</div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="images/img-2.jpg" alt="card Image" class="card-image">
+                            <h2 class="card-name">Sarah Johnson</h2>
+                            <p class="card-profession">Graphic Designer</p>
+                            <button class="message-button">Message</button>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="images/img-3.jpg" alt="card Image" class="card-image">
+                            <h2 class="card-name">Michael Brown</h2>
+                            <p class="card-profession">Project Manager</p>
+                            <button class="message-button">Message</button>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="images/img-4.jpg" alt="card Image" class="card-image">
+                            <h2 class="card-name">Emily Davis</h2>
+                            <p class="card-profession">Marketing Specialist</p>
+                            <button class="message-button">Message</button>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="images/img-5.jpg" alt="card Image" class="card-image">
+                            <h2 class="card-name">Christopher Garcia</h2>
+                            <p class="card-profession">Data Scientist</p>
+                            <button class="message-button">Message</button>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="images/img-6.jpg" alt="card Image" class="card-image">
+                            <h2 class="card-name">Richard Wilson</h2>
+                            <p class="card-profession">Product Designer</p>
+                            <button class="message-button">Message</button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>-->
         <!-- Footer Content -->
         <div id="footer-wrapper">
             <footer id="footer" class="container">
@@ -445,8 +523,8 @@
                                     Copyright &copy; DeltaFramework 2024 -
                                     <script>document.write(new Date().getFullYear())</script><br>
                                     DeltaFramework Version: 3.0.0<br>
-                                    Website Version: 1.37<br>
-                                    Updated Date: August 21, 2024<br>
+                                    Website Version: 1.38<br>
+                                    Updated Date: August 24, 2024<br>
                                     All rights reserved<br>
                                     <a class="hidelink" style="display: inline-block; margin: 0px 0px 0px 0px; text-decoration: none; -webkit-tap-highlight-color: transparent;" href="info.html" title="Credits" target="_blank"> Credits </a> <br>
 
@@ -467,5 +545,9 @@
             </footer>
         </div>
     </div>
+
+    <!-- Linking SwiperJS script & custom script -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slider.js"></script>
 </body>
 </html>
