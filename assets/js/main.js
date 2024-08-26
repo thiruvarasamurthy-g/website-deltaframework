@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         displayVal = "block";
     }
 
-    const info = dateInfo[key] || { image: "images/WishesIcon/HBD.png", message: "none" };
+    const info = dateInfo[key] || { image: "images/WishesIcon/WISH.png", message: "none" };
 
     document.getElementById("WishesPanel").style.display = displayVal;
     document.getElementById("WishesPanelImage").src = info.image;
