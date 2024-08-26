@@ -94,7 +94,7 @@
     font-size: 1.15rem;
     color: #fff;
     font-weight: 500;
-    margin: 5px 0px 0px 5px;
+    margin: 10px 0px 10px 0px;
 }
 
 .card-item-new-message-header {
@@ -102,7 +102,7 @@
     text-shadow: 4px 4px 8px #1a4491;
     color: #fff;
     font-weight: 500;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 10px 0px;
 }
 
 @media (max-width: 768px) {
