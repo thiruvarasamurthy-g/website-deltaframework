@@ -103,4 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("WishesPanel").style.display = displayVal;
     document.getElementById("WishesPanelImage").src = info.image;
     document.getElementById("WishesPanelMessage").innerText = info.message;
+
+    const copyrightMessage = document.getElementById('copyrightMessage');
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    copyrightMessage.textContent = copyrightMessage.textContent + currentYear;
+
 });
