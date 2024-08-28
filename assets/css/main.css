@@ -307,6 +307,13 @@ p, ul, ol, dl, table {
     width: 1400px;
 }
 
+@media screen and (max-width: 4000px) {
+
+    body {
+        zoom: 91%;
+    }
+}
+
 @media screen and (max-width: 1680px) {
 
     .container {
@@ -323,12 +330,20 @@ p, ul, ol, dl, table {
 
 @media screen and (max-width: 980px) {
 
+    body {
+        zoom: 100%;
+    }
+
     .container {
         width: 90%;
     }
 }
 
 @media screen and (max-width: 736px) {
+
+    body {
+        zoom: 100%;
+    }
 
     .container {
         width: 100%;
@@ -1749,12 +1764,12 @@ button,
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
-    font-weight: 800;
+    font-weight: 600;
     outline: 0;
     border: 0;
     cursor: pointer;
-    font-size: 1.35em;
-    padding: 0.6em 1.5em;
+    font-size: 1.5em;
+    padding: 0.5em 1.5em;
 }
 
     input[type="button"].icon:before,
@@ -2209,8 +2224,8 @@ ul.menu {
     }
 
     #banner .button {
-        width: 100%;
-        margin-bottom: 0.5em;
+        /* width: 100%;*/
+        /*margin-bottom: 0.5em;*/
     }
 
         #banner .button.icon:before {
