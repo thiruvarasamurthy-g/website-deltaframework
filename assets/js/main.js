@@ -27,7 +27,7 @@ $(function () {
 });
 
 function textCopyToClipboard() {
-    navigator.clipboard.writeText("https://www.deltaframework.net\nAuthor: Thiruvarasamurthy G\nDeltaFramework: A cutting-edge, modern, and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries, and Project Templates will accelerate the projects.");
+    navigator.clipboard.writeText("https://www.deltaframework.net\nAuthor: Thiruvarasamurthy G\nDeltaFramework: A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects.");
 }
 
 function scrollToTop() {
