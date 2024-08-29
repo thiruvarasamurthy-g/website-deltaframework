@@ -32,6 +32,7 @@
     backdrop-filter: blur(30px);
     background: #1a4997;
     background-image: linear-gradient(#1c6dac,#1a4997);
+/*    background-image: radial-gradient(circle, #2d65c4, #285eb9, #2457ad, #1f50a2, #1a4997);*/
     border: 1px solid #134899;
 }
 
@@ -113,7 +114,7 @@
     font-size: 1.15rem;
     color: #fff;
     font-weight: 500;
-    margin: 10px 0px 10px 0px;
+    margin: 5px 0px 10px 0px;
 }
 
 .card-item-new-message-header {
