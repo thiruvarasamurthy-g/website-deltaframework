@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             image: "images/WishesIcon/WISH.png",
             message: "Merry Christmas!"
         },
-        "08-31": {
+        "09-07": {
             image: "images/WishesIcon/WISH.png",
             message: "Happy Birtyday DeltaFramework!"
         },
