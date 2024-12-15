@@ -348,6 +348,12 @@ p, ul, ol, dl, table {
     .container {
         width: 100%;
     }
+
+    #imageBox {
+        width: 350px;
+        height: 500px;
+    }
+
 }
 
 /* Row */
