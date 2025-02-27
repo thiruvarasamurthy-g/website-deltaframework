@@ -51,7 +51,7 @@ function changeMovableHeader() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-
+    //Format is MM-DD
     const dateInfo = {
         "01-01": {
             image: "images/WishesIcon/WISH.png",
@@ -69,15 +69,15 @@ document.addEventListener("DOMContentLoaded", function () {
             image: "images/WishesIcon/WISH.png",
             message: "Happy Birtyday DeltaFramework!"
         },
-        "08-20": {
+        "-08-20": {
             image: "images/WishesIcon/WISH.png",
             message: "Happy Birtyday Author!"
         },
-        "08-21": {
+        "-08-21": {
             image: "images/WishesIcon/WISH.png",
             message: "Belated Happy Birtyday Author!"
         },
-        "04-06": {
+        "-04-06": {
             image: "images/WishesIcon/WISH.png",
             message: "Happy Birtyday SivSank-SD!"
         }
