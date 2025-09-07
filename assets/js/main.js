@@ -67,19 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         "09-07": {
             image: "images/WishesIcon/WISH.png",
-            message: "Happy Birtyday DeltaFramework!"
+            message: "Happy Birthday DeltaFramework!"
         },
         "-08-20": {
             image: "images/WishesIcon/WISH.png",
-            message: "Happy Birtyday Author!"
+            message: "Happy Birthday Author!"
         },
         "-08-21": {
             image: "images/WishesIcon/WISH.png",
-            message: "Belated Happy Birtyday Author!"
+            message: "Belated Happy Birthday Author!"
         },
         "-04-06": {
             image: "images/WishesIcon/WISH.png",
-            message: "Happy Birtyday SivSank-SD!"
+            message: "Happy Birthday SivSank-SD!"
         }
     };
 
