@@ -194,14 +194,17 @@ html {
 }
 
 body {
+    background: linear-gradient(150deg, #ecedee, transparent 15%),
+        linear-gradient(330deg, rgb(210, 206, 242), transparent 15%),
+        linear-gradient(225deg, #fff0be, #fbdce7, #e2fae1, powderblue);
     /* background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
     background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");*/
-    background-color: #0d1117;
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
+    background-color: #0d1117; 
     background-position: top left, top left;
-    background-repeat: repeat-x, repeat;
-    background-size: 100% 30em, auto;
+    background-repeat: repeat-x, repeat; 
+    background-size: 100% 30em, auto;*/
     font-family: 'Open Sans', sans-serif;
     font-size: 13pt;
     color: #696969;
@@ -217,8 +220,8 @@ body {
 			-moz-transition: none !important;
 			-webkit-transition: none !important;
 			-ms-transition: none !important;*/
-        /*transition: none !important;*/
-    }
+    /*transition: none !important;*/
+}
 
 input, select, textarea {
     font-family: 'Open Sans', sans-serif;
@@ -2276,7 +2279,7 @@ ul.menu {
     }
 
 #copyright {
-    color: #f0f0f0;
+    color: #0b0a0a;
     padding: 0 0 0 0;
     text-align: center;
     font-weight: 600;
