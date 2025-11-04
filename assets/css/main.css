@@ -194,7 +194,13 @@ html {
 }
 
 body {
-	background: linear-gradient(to right, #63ADF8, #BBDBFC, #63ADF8);
+	background: linear-gradient(135deg, #f0f8ff, /* Alice Blue */
+	#e6f7ff, /* Powder Blue Tint */
+	#e0f7fa, /* Light Cyan */
+	#f0ffff, /* Azure */
+	#ebf5fb, /* Ice Blue */
+	#f5fcff /* Cloud Blue */
+	);
 	/* background: linear-gradient(150deg, #ecedee, transparent 15%), linear-gradient(330deg, rgb(210, 206, 242), transparent 15%), linear-gradient(225deg, #fff0be, #fbdce7, #e2fae1, powderblue);
 	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
 	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
