@@ -1,1047 +1,1218 @@
-<!DOCTYPE HTML>
 <!--
-    DeltaFramework.NET by Thiruvarasamurthy G
+    Copyright (c) DeltaFramework
     Author: Thiruvarasamurthy G, IT Architect and Core Developer
-    https://www.thirufactory.com/
+    https://www.thirufactory.com
 -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>DeltaFramework.Net</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeltaFramework</title>
+
+    <!-- SEO Meta Tags -->
     <meta property="og:site_name" content="DeltaFramework.Net">
     <meta property="og:title" content="DeltaFramework.Net" />
-    <meta property="og:description" content="A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects." />
-    <meta property="og:image" itemprop="image" content="https://www.deltaframework.net/images/DeltaFramework-256x256.png">
+    <meta property="og:description"
+        content="A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects." />
+    <meta property="og:image" itemprop="image"
+        content="https://www.deltaframework.net/images/DeltaFramework-256x256.png">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.deltaframework.net" />
-
-    <meta charset="utf-8" />
-    <meta name="description" content="A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects.">
-    <meta name="keywords" content="DeltaFramework, Delta Framework, Delta, Framework, Library, NuGet, .NET, Thiruvarasamurthy G">
+    <meta name="description"
+        content="A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects.">
+    <meta name="keywords"
+        content="DeltaFramework, Delta Framework, Delta, Framework, Library, NuGet, .NET, .NET 8, AI Integration, RAG, Microservices, Clean Architecture, High Performance, Thiruvarasamurthy G">
     <meta name="author" content="Thiruvarasamurthy G">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-    <meta name='dmca-site-verification' content='Y09PK1hHcFJuYzhDTEprQVR3eURSVVdlRUppdVlpRnZvYnJQUXZ6NDB5WT01' />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=block" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=block" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=block" rel="stylesheet">
-
-    <link rel="preload" href="assets/css/main.css" as="style" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- CSS & Image Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/consent.css">
     <link rel="icon" type="image/x-icon" href="images/DeltaFramework.png">
+    <!-- JS Files -->
+    <!-- Google tag (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
 
-    <link rel="preload" href="assets/css/swiper-bundle.min.css" as="style" />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="preload" href="assets/css/slider.css" as="style" />
-    <link rel="stylesheet" href="assets/css/slider.css">
-    <link rel="preload" href="assets/css/youtube.css" as="style" />
-    <link rel="stylesheet" href="assets/css/youtube.css">
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+        });
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+        gtag('js', new Date());
+        gtag('config', 'G-VYGHJ6X08E');
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYGHJ6X08E"></script>
-
 </head>
-<body class="is-preload homepage prevent-select">
-    <div id="page-wrapper">
-        <div style="display:contents; flex-direction: column; ">
-            <!-- Header Content-->
-            <div id="header-wrapper">
-                <div id="banner-fixed" class="container" style1="padding: 0em 0em 6.5em 0em ">
-                    <header id="header" class="container " style="position: fixed; top: 0; z-index: 999;">
-                        <!-- Logo -->
-                        <div id="logo">
-                            <h1><a href="https://www.deltaframework.net" target="_self" style="-webkit-tap-highlight-color: transparent;" class="confirm_selection">DeltaFramework</a></h1>
-                            <br>
-                            <span style="padding: 0px 0px 5px 0px;display:none">
-                                Designed for AI, built for enterprise scale.<br>
-                            </span>
-                            <span style="padding: 0px 0px 5px 0px;">
-                                <a id="author" href="https://www.thirufactory.com" target="_blank">
-                                    Author: Thiruvarasamurthy G
-                                </a>
-                            </span>
+
+<body>
+    <!-- Fixed Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="DeltaFramework Logo" class="logo-img">
+                <span>DeltaFramework</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#highlights">Highlights</a>
+                <a href="#features">Features</a>
+                <a href="#ai">AI Capabilities</a>
+                <a href="#performance">Performance</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#author">Author</a>
+                <a href="#news">News</a>
+                <a href="#social">Social</a>
+            </nav>
+
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Build High-Performance Software Systems with <span class="gradient-text">Integrated AI</span>
+                    </h1>
+                    <p><b>DeltaFramework</b> provides a comprehensive library and project templates to accelerate
+                        development with built-in AI capabilities, RAG integration, and exceptional performance.</p>
+
+                    <div class="hero-badges">
+                        <div class="badge">
+                            <i class="fas fa-rocket"></i> Startup in &lt; 200ms
                         </div>
-                    </header>
+                        <div class="badge">
+                            <i class="fas fa-bolt"></i> 4M+ requests/minute
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-brain"></i> AI-Powered
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-layer-group"></i> Multiple Architectures
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-expand-arrows-alt"></i>Scalable
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#highlights" class="btn btn-primary">
+                            <i class="fas fa-play-circle"></i> Get Started
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="images/DeltaFramework-Box.png" alt="DeltaFramework Box" class="hero-main-img">
                 </div>
             </div>
-            <!-- Banner Top Content-->
-            <div id="banner-wrapper" style="padding: 0px 0px 0 0px; margin-top: 0px; ">
-                <div id="banner" class="box container prevent-select prevent-pointer-events-dummy" style="border-radius: 0px;background-image1: radial-gradient(circle, #d5d348, #ffc785, #ffcfd1, #ffe9ff, #ffffff);">
-                    <div class="row" style="align-items: flex-end;text-align: center; text-justify: inter-word;">
+        </div>
+    </section>
 
-                        <!-- Wishes Content, Icon & Text Content-->
-                        <div class="col-7dummy col-12-medium">
-                            <!-- Wishes Content-->
-                            <div id="WishesPanel" style="margin:0px;display:none" class="col-7dummy col-12-medium">
+    <!-- Highlights Section -->
+    <section class="highlights" id="highlights">
+        <div class="container">
+            <div class="section-title">
+                <h2>Framework Highlights</h2>
+                <p class="section-subtitle">Key features that make DeltaFramework the ideal choice for modern .NET
+                    development</p>
+            </div>
 
-                                <a title="Wishes" class="bannerimage hidelinkself">
-                                    <img id="WishesPanelImage" style="pointer-events:none;border-radius:10px" src="images/DeltaFramework.png" alt="" width="155" height="100" />
-                                </a>
-                                <h4 style="text-shadow: 10px 5px 10px #f179ea; color: #e80892; margin: 0px; animation: glow 1s ease-in-out infinite alternate; } ">
-                                    <span id="WishesPanelMessage"></span>
-                                </h4>
-                            </div>
+            <div class="highlights-grid">
+                <!-- Highlight 1 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Introduction</h3>
+                    <p>A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture
+                        Styles, Frameworks, Libraries and Project Templates will accelerate the projects.</p>
+                </article>
 
-                            <a title="DeltaFramework" class="bannerimage hidelinkself" onclick="changeMovableHeader()">
-                                <img id="image-nospin" style="pointer-events:none" src="images/DeltaFramework.gif" alt="" width="100" height="100" onclick="changeMovableHeader()" />
-                            </a><br>
-                            <p style=" text-shadow: 1px 1px 1px #f3f3f3; display: none;">
-                                <b>
-                                    Designed for AI, built for enterprise scale.
-                                    A cutting-edge, modern and robust software creation bundle.
-                                    It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects.
-                                </b>
-                            </p>
-                            <a title="DeltaFramework" class="bannerimage hidelinkself">
-                                <img id="imageBox" style="pointer-events: none;margin-top:20px" src="images/DeltaFramework-Box.png" alt="DeltaFramework-Box" width="550" height="750" />
-                            </a>
+                <!-- Highlight 2 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Modernization</h3>
+                    <p>Framework harnesses modern concepts and technologies to build contemporary applications and
+                        projects. It transforms legacy systems into agile, scalable solutions for enterprise.</p>
+                </article>
+
+                <!-- Highlight 3 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Driven</h3>
+                    <p>Framework seamlessly understood by AI agents and tools, enabling rapid, high‑quality feature
+                        creation with smarter innovation, delivering speed and excellence at scale.</p>
+                </article>
+
+                <!-- Highlight 4 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Enterprise</h3>
+                    <p>A robust, scalable foundation for enterprise-level applications and projects. It delivers
+                        architecture, modular components, and tools for integration, security, and performance.</p>
+                </article>
+
+                <!-- Highlight 5 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Architecture</h3>
+                    <p>Architecture supports N-Tier, Onion, Clean, Vertical Slice, Microservice and Modular Monolith
+                        styles. Also ensuring flexibility, scalability and maintainable projects.</p>
+                </article>
+
+                <!-- Highlight 6 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Framework Library</h3>
+                    <p>Libraries in DeltaFramework offers significant benefits with minimal effort, designed for
+                        efficiency, seamless usage and easy integration via standard NuGet packages.</p>
+                </article>
+
+                <!-- Highlight 7 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-clone"></i>
+                    </div>
+                    <h3>Project Template</h3>
+                    <p>Project templates create reusable, architecture structures, pre-configured setups and
+                        dependencies, ensuring consistency and accelerating new project creation.</p>
+                </article>
+
+                <!-- Highlight 8 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Code Generator</h3>
+                    <p>DeltaFramework source code generator tool offers code generation compatible with DeltaFramework.
+                        It mitigates development work loads and increase more productivity.</p>
+                </article>
+
+                <!-- Highlight 9 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Supports both proprietary and open-source AI models integration without altering application
+                        source code. Offers flexible deployment with own on-premises infrastructure.</p>
+                </article>
+
+                <!-- Highlight 10 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>RAG (Retrieval-Augmented Generation)</h3>
+                    <p>Retrieval-augmented generation (RAG) enhances Gen AI by fetching relevant data to inform
+                        responses. It guides LLMs to answer queries using a targeted set of reference documents.</p>
+                </article>
+
+                <!-- Highlight 11 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Multi Tenancy</h3>
+                    <p>Multi tenancy is an architecture offers a single instance of software serves multiple tenants,
+                        each with its own isolated data. It fits for SaaS applications and offering cost-effectiveness.
+                    </p>
+                </article>
+
+                <!-- Highlight 12 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Multi Database</h3>
+                    <p>Supports multiple leading databases including SQLite, MS-SQL, Azure MS-SQL, PostgreSQL, MongoDB,
+                        Oracle DB, MySQL, MariaDB, FirebirdDB with the same source code.</p>
+                </article>
+
+                <!-- Highlight 13 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security</h3>
+                    <p>Provides security for application modern authentication and authorizations, preventing data
+                        injection, enhancing data protection, access control mechanism and etc.</p>
+                </article>
+
+                <!-- Highlight 14 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3>Multi Authentication</h3>
+                    <p>Provides Multi Authentication security for application authentication and authorization it
+                        supports JWT, ApiKey, Basic, OIDC and OAuth2 concurrently in application.</p>
+                </article>
+
+                <!-- Highlight 15 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Zero Trust</h3>
+                    <p>Zero Trust is a security framework that operates on the principle of "never trust, always
+                        verify". It requires strict identity verification for every user and device trying to access
+                        resources.</p>
+                </article>
+
+                <!-- Highlight 16 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Performance</h3>
+                    <p>High application performance ensures fast load times, low latency and efficient resource use,
+                        achieved by optimizing code, database and IO operations, and others.</p>
+                </article>
+
+                <!-- Highlight 17 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Distributed Cache</h3>
+                    <p>Distributed cache stores data across multiple nodes in a network, providing high-speed data
+                        access, improved application performance, scalability, and fault tolerance for large-scale,
+                        high-traffic systems.</p>
+                </article>
+
+                <!-- Highlight 17 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <h3>Reverse Proxy</h3>
+                    <p>A reverse proxy acts as an intermediary between clients and backend servers, handling requests,
+                        SSL termination, load balancing, caching, and security to optimize performance and protect
+                        server infrastructure.</p>
+                </article>
+
+                <!-- Highlight 19 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>MultiSource Config</h3>
+                    <p>MultiSource configuration files allows application get configurations from multiple source such
+                        as fragmented files, environment variables and direct memory.</p>
+                </article>
+
+                <!-- Highlight 20 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Mapper</h3>
+                    <p>Built-in Mapper simplify object-to-object mapping which automatically transfer data between
+                        classes, reducing boilerplate code in data transformation tasks.</p>
+                </article>
+
+                <!-- Highlight 21 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Mediator</h3>
+                    <p>Built-in Mediator implements the mediator pattern to simplify in-app messaging. It decouples
+                        request handling by routing commands, queries, and events through centralized handlers.</p>
+                </article>
+
+                <!-- Highlight 22 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Validator</h3>
+                    <p>Built-in Validator building strongly-typed validation rules using a fluent interface. It
+                        streamlines input validation by separating logic from models and enhancing product.</p>
+                </article>
+
+                <!-- Highlight 23 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>MCP (Model Control Protocol)</h3>
+                    <p>MCP (Model Control Protocol) is a new standard designed to streamline communication between AI
+                        models and apps. It enables seamless integration across with AI systems.</p>
+                </article>
+
+                <!-- Highlight 24 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Quantum Computing</h3>
+                    <p>Quantum computing leverages quantum bits (qubits) to perform complex computations far beyond
+                        classical capabilities with Q# language makes quantum algorithms efficiently.</p>
+                </article>
+
+                <!-- Highlight 25 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>ORM (Object-Relational Mapping)</h3>
+                    <p>Object-Relational Mapping simplifies database interactions by mapping objects in code to database
+                        tables. It allows to use OOP to manage data without writing complex SQL queries.</p>
+                </article>
+
+                <!-- Highlight 26 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-stream"></i>
+                    </div>
+                    <h3>OData (Open Data Protocol)</h3>
+                    <p>Open Data Protocol is a protocol for building and consuming RESTful APIs, enabling easy querying
+                        data over HTTP. It supports filtering, sorting and pagination in URL.</p>
+                </article>
+
+                <!-- Highlight 27 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Minimal API</h3>
+                    <p>Minimal API is a lightweight framework in .NET for building simple, high-performance web APIs
+                        with minimal code. It streamlines the development process by reducing boilerplate.</p>
+                </article>
+
+                <!-- Highlight 28 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h3>OpenAPI</h3>
+                    <p>OpenAPI defines RESTful APIs with a standardized format for endpoints and data models. Swagger
+                        tools enhance this with automated documentation. Both are streamline API development.</p>
+                </article>
+
+                <!-- Highlight 29 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>API Version</h3>
+                    <p>API versioning allows you to manage multiple API versions simultaneously, ensuring backward
+                        compatibility. It helps maintain stability for existing clients as new features added.</p>
+                </article>
+
+                <!-- Highlight 30 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3>DB Deployment</h3>
+                    <p>Entity Framework Migrations provides a streamlined way to manage database schema changes
+                        alongside the application code. This ensures the smooth deployments.</p>
+                </article>
+
+                <!-- Highlight 31 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Resilience</h3>
+                    <p>Resilience enables robust applications by using retry policies and circuit breakers, ensuring
+                        stability in challenging environments and opt for high availability systems.</p>
+                </article>
+
+                <!-- Highlight 32 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Background Job</h3>
+                    <p>Background jobs enable tasks to run asynchronously or on a schedule, offloading intensive
+                        processes from the main application. It improves performance in background.</p>
+                </article>
+
+                <!-- Highlight 33 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-hubspot"></i>
+                    </div>
+                    <h3>BackgroundJob Hub</h3>
+                    <p>The Background Jobs Hub provides a centralized way to monitor and control jobs. Instantly view
+                        job statuses, with built‑in support to pause and resume as needed.</p>
+                </article>
+
+                <!-- Highlight 34 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Context Accessor</h3>
+                    <p>Context Accessor centralizes and streamlines access to real‑time user details, client
+                        information, and security data, bringing everything together in one unified place.</p>
+                </article>
+
+                <!-- Highlight 35 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Logger</h3>
+                    <p>Logger provides structured logging, allowing developers to capture detailed logs. It supports
+                        various log sinks, making it easy to route logs to files, databases, or external systems.</p>
+                </article>
+
+                <!-- Highlight 36 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Exception Handler</h3>
+                    <p>Global exception handling standardizes error responses using RFC 7807 Problem Details, offering
+                        clear, structured information for better debugging and client communication.</p>
+                </article>
+
+                <!-- Highlight 37 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Health Check</h3>
+                    <p>Health checks monitor application status, including dependencies and resources, providing
+                        insights into system health for proactive maintenance and better reliability.</p>
+                </article>
+
+                <!-- Highlight 38 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>CPM (Central Package Management)</h3>
+                    <p>NuGet's central package management (CPM) simplifies managing dependencies for multi-project
+                        solutions. It offers single location for various projects.</p>
+                </article>
+
+                <!-- Highlight 39 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Modern .NET</h3>
+                    <p>Modern .NET is a cross-platform, open source and powerful development framework that supports
+                        building applications across various platforms and opts for modern development.</p>
+                </article>
+
+                <!-- Highlight 40 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools</h3>
+                    <p>Development tools like VS Code, Visual Studio, Rider, ReSharper, NuGet and Git streamline coding,
+                        debugging, deployment and boosting productivity enormously.</p>
+                </article>
+
+                <!-- Highlight 41 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <h3>Modern Pattern</h3>
+                    <p>Modern software principles, design patterns, Mediator, CQRS, Event Sourcing, Repository, DDD and
+                        SDD, promote scalability, maintainability and flexibility in building robust applications.</p>
+                </article>
+
+                <!-- Highlight 42 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Modern Development</h3>
+                    <p>Supports Modern software development with AI boosts speed and quality. Spec-Driven Development
+                        (SDD) ensures clarity and alignment by building software from well specifications.</p>
+                </article>
+
+                <!-- Highlight 43 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p>Supports ease the project management with modern concepts for project life cycle, enhancing team
+                        productivity and project delivery speedy.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Core Features</h2>
+                <p class="section-subtitle">Designed for efficiency and seamless integration with minimal development
+                    effort</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <article class="feature-card">
+                    <div class="feature-icon library-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Framework Library</h3>
+                    <p>A core component offering substantial benefits with minimal development effort. Designed for
+                        efficiency and seamless usage.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Adheres to NuGet standards for easy integration</li>
+                        <li><i class="fas fa-check"></i> Minimal development effort required</li>
+                        <li><i class="fas fa-check"></i> Optimized for high performance</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 2 -->
+                <article class="feature-card">
+                    <div class="feature-icon template-icon">
+                        <i class="fas fa-clone"></i>
+                    </div>
+                    <h3>Project Template</h3>
+                    <p>Facilitates the creation of technical projects with a single click, supporting various
+                        architecture styles.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> One-click project creation</li>
+                        <li><i class="fas fa-check"></i> Supports N-Tier, Onion, Clean Architecture</li>
+                        <li><i class="fas fa-check"></i> Vertical Slice, Microservice & Modular Monolith</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 3 -->
+                <article class="feature-card">
+                    <div class="feature-icon ai-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Proprietary Models</h3>
+                    <p>Seamlessly integrate AI capabilities without requiring a single line of source code in your
+                        application.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> OpenAI ChatGPT, Azure OpenAI</li>
+                        <li><i class="fas fa-check"></i> GitHub Copilot, Copilot and Gemini</li>
+                        <li><i class="fas fa-check"></i> Many proprietary AI models</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 4 -->
+                <article class="feature-card">
+                    <div class="feature-icon ai-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>AI-OpenSource Models</h3>
+                    <p>Support for various open-source AI models with on-premises hosting capabilities.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> DeepSeek-R1, Llama, Phi, Mistral, Gemma</li>
+                        <li><i class="fas fa-check"></i> Hosted in your own on-premises environments</li>
+                        <li><i class="fas fa-check"></i> No source code modifications required</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 5 -->
+                <article class="feature-card">
+                    <div class="feature-icon rag-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>AI-RAG Ingest</h3>
+                    <p>Easily ingest and index your data for Retrieval-Augmented Generation to keep AI knowledge fresh
+                        and accurate.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Combines AI's creativity with real-time data</li>
+                        <li><i class="fas fa-check"></i> Retrieves relevant facts from sources</li>
+                        <li><i class="fas fa-check"></i> Reduces errors and keeps knowledge fresh</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 6 -->
+                <article class="feature-card">
+                    <div class="feature-icon rag-icon">
+                        <i class="fas fa-comment-alt"></i>
+                    </div>
+                    <h3>AI-RAG Prompt</h3>
+                    <p>Combine AI's creativity with real-time data lookup for accurate, context-aware responses.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Generates responses based on retrieved facts</li>
+                        <li><i class="fas fa-check"></i> Context-aware answer generation</li>
+                        <li><i class="fas fa-check"></i> Improved accuracy and relevance</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 7 -->
+                <article class="feature-card">
+                    <div class="feature-icon performance-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Performance Insight</h3>
+                    <p>The design goal of the DeltaFramework startup duration is below 1000 Milliseconds.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Meticulously designed for high-performance</li>
+                        <li><i class="fas fa-check"></i> Array of built-in features</li>
+                        <li><i class="fas fa-check"></i> Consistently maintaining high efficiency</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 8 -->
+                <article class="feature-card">
+                    <div class="feature-icon performance-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Performance Insight v11.0.0</h3>
+                    <p>DeltaFramework library v11.0.0 version offers significant performance enhancements.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Startup Duration: 193 Milliseconds</li>
+                        <li><i class="fas fa-check"></i> Numerous built-in features</li>
+                        <li><i class="fas fa-check"></i> Optimized efficiency</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Capabilities Section -->
+    <section class="ai-capabilities" id="ai">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI Capabilities</h2>
+                <p class="section-subtitle">Seamlessly integrate AI into your applications with DeltaFramework's
+                    comprehensive AI features</p>
+            </div>
+
+            <div class="ai-grid">
+                <div class="ai-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Proprietary AI Models</h3>
+                    <p>Integrate with leading AI services like OpenAI ChatGPT, Azure OpenAI, GitHub Copilot, and Gemini.
+                    </p>
+                </div>
+
+                <div class="ai-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Open-Source AI Models</h3>
+                    <p>Support for open-source AI models like DeepSeek-R1, Llama, Phi, Mistral, and Gemma with
+                        on-premises hosting.</p>
+                </div>
+
+                <div class="ai-card">
+                    <i class="fas fa-database"></i>
+                    <h3>RAG Ingest</h3>
+                    <p>Easily ingest and index your data for Retrieval-Augmented Generation to keep AI knowledge fresh
+                        and accurate.</p>
+                </div>
+
+                <div class="ai-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>RAG Prompt</h3>
+                    <p>Combine AI's creativity with real-time data lookup for accurate, context-aware responses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="performance" id="performance">
+        <div class="container">
+            <div class="section-title">
+                <h2>Performance Insights</h2>
+                <p class="section-subtitle">Engineered for exceptional performance with measurable results</p>
+            </div>
+
+            <div class="performance-section">
+                <div class="performance-header">
+                    <h2>High-Performance Design</h2>
+                    <p>DeltaFramework is meticulously designed for high-performance, offering an array of built-in
+                        features while consistently maintaining high efficiency.</p>
+                </div>
+
+                <div class="performance-metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">&lt; 200ms</div>
+                        <div class="metric-label">Startup Duration</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-value">v11.0.0</div>
+                        <div class="metric-label">Latest Version</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-value">0 Failed</div>
+                        <div class="metric-label">Requests in Load Test</div>
+                    </div>
+                </div>
+
+                <div class="load-test">
+                    <h3>Load Test Results</h3>
+                    <p>Environment: 1 PC (App Server + DB Server + Load Testing Tool), CPU: 5.80 GHz, RAM: 32 GB</p>
+
+                    <div class="test-results">
+                        <div class="test-result">
+                            <div class="test-value">4.18M</div>
+                            <div class="test-label">Total HTTP Requests</div>
+                        </div>
+
+                        <div class="test-result">
+                            <div class="test-value">69,747</div>
+                            <div class="test-label">Requests per Second</div>
+                        </div>
+
+                        <div class="test-result">
+                            <div class="test-value">60s</div>
+                            <div class="test-label">Test Duration</div>
+                        </div>
+
+                        <div class="test-result">
+                            <div class="test-value">0</div>
+                            <div class="test-label">Failed Requests</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Banner Top Content 2 : Slider-->
-        <br>
-        <div id="banner-wrapper">
-            <div id="banner" class="box container">
-                <div class="row" style="align-items: flex-end;text-align: center; text-justify: inter-word;">
-                    <div class="col-7dummy col-12-medium">
-
-                        <h3 style="font-size: 1.50em">
-                            Highlights
-                        </h3>
-                        <div class="slider-panel">
-                            <div class="container swiper">
-                                <div class="slider-wrapper">
-                                    <div class="card-list swiper-wrapper">
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Introduction" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Introduction.png" alt="Introduction" title="Introduction" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px;margin-bottom:5px" />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Introduction</p>
-
-                                            <h3 class="card-item-new-message">
-                                                A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Modernization" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Modernization.png" alt="Modernization" title="Modernization" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px;margin-bottom:5px" />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Modernization</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Framework harnesses modern concepts and technologies to build contemporary applications and projects. It transforms legacy systems into agile, scalable solutions for enterprise.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Ai Driven" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/AiDriven.png" alt="AiDriven" title="AiDriven" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px;margin-bottom:5px" />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">AI Driven</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Framework seamlessly understood by AI agents and tools, enabling rapid, high‑quality feature creation with smarter innovation, delivering speed and excellence at scale.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Enterprise" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Enterprise.png" alt="Enterprise" title="Enterprise" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px;margin-bottom:5px" />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Enterprise</p>
-
-                                            <h3 class="card-item-new-message">
-                                                A robust, scalable foundation for enterprise-level applications and projects. It delivers architecture, modular components, and tools for integration, security, and performance
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Architecture" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Architecture.png" alt="Architecture" title="Architecture" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Architecture</p>
-
-
-                                            <h3 class="card-item-new-message">
-                                                Architecture supports N-Tier, Onion, Clean, Vertical Slice, Microservice and Modular Monolith styles. Also ensuring flexibility, scalability and maintainable projects.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="NuGet" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/NuGet.png" alt="NuGet" title="NuGet" width="54" height="52" style="background-color: #fff; padding: 10px; border-radius: 5px; margin-bottom: 5px" />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Framework Library</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Libraries in DeltaFramework offers significant benefits with minimal effort, designed for efficiency, seamless usage and easy integration via standard NuGet packages.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Templates" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Templates.png" alt="Templates" title="Templates" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Project Template</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Project templates create reusable, architecture structures, pre-configured setups and dependencies, ensuring consistency and accelerating new project creation.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="CodeGen" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/CodeGen.png" alt="CodeGen" title="CodeGen" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Code Generator</p>
-
-                                            <h3 class="card-item-new-message">
-                                                DeltaFramework source code generator tool offers code generation compatible with DeltaFramework. It mitigates development work loads and increase more productivity.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Artificial Intelligence" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/AI.png" alt="CodeGen" title="CodeGen" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Artificial Intelligence</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Supports both proprietary and open-source AI models integration without altering application source code. Offers flexible deployment with own on-premises infrastructure.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="RAG" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/RAG.png" alt="CodeGen" title="CodeGen" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">RAG</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Retrieval-augmented generation (RAG) enhances Gen AI by fetching relevant data to inform responses. It guides LLMs to answer queries using a targeted set of reference documents.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="MultiTenancy" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/MultiTenancy.png" alt="MultiTenancy" title="MultiTenancy" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Multi Tenancy</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Multi tenancy is an architecture offers a single instance of software serves multiple tenants, each with its own isolated data. It fits for SaaS applications and offering cost-effectiveness.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Databases" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Databases.png" alt="Databases" title="Databases" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Database</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Supports multiple leading databases including SQLite, MS-SQL, Azure MS-SQL, PostgreSQL, MongoDB, Oracle DB, MySQL, MariaDB, FirebirdDB with the same source code.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Security" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Security.png" alt="Security" title="Security" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Security</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Provides security for application modern authentication and authorizations, preventing data injection, enhancing data protection, access control mechanism and etc.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="MultiAuthentication" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/MultiAuthentication.png" alt="Security" title="Security" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Multi Authentication</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Provides Multi Authentication security for application authentication and authorization it supports JWT, ApiKey, Basic, OIDC and OAuth2 concurrently in application.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="SecurityZeroTrust" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/SecurityZeroTrust.png" alt="SecurityZeroTrust" title="SecurityZeroTrust" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Zero Trust</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Zero Trust is a security framework that operates on the principle of "never trust, always verify". It requires strict identity verification for every user and device trying to access resources.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Performance" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Performance.png" alt="Performance" title="Performance" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Performance</p>
-
-                                            <h3 class="card-item-new-message">
-                                                High application performance ensures fast load times, low latency and efficient resource use, achieved by optimizing code, database and IO operations, and others.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="MultiSourceConfig" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/MultiSourceConfig.png" alt="MultiSourceConfig" title="MultiSourceConfig" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">MultiSource Config</p>
-
-                                            <h3 class="card-item-new-message">
-                                                MultiSource configuration files allows application get configurations from multiple source such as fragmented files, environment variables and direct memory.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Mapper" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Mapper.png" alt="FragmentConfigs" title="FragmentConfigs" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Mapper</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Built-in Mapper simplify object-to-object mapping which automatically transfer data between classes, reducing boilerplate code in data transformation tasks.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Mediator" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Mediator.png" alt="FragmentConfigs" title="FragmentConfigs" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Mediator</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Built-in Mediator implements the mediator pattern to simplify in-app messaging. It decouples request handling by routing commands, queries, and events through centralized handlers.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Validator" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Validator.png" alt="FragmentConfigs" title="FragmentConfigs" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Validator</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Built-in Validator building strongly-typed validation rules using a fluent interface. It streamlines input validation by separating logic from models and enhancing product.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="MCP" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/MCP.png" alt="FragmentConfigs" title="FragmentConfigs" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">MCP</p>
-
-                                            <h3 class="card-item-new-message">
-                                                MCP (Model Control Protocol) is a new standard designed to streamline communication between AI models and apps. It enables seamless integration across with AI systems.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="QuantumComputing" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/QuantumComputing.png" alt="FragmentConfigs" title="FragmentConfigs" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Quantum Computing</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Quantum computing leverages quantum bits (qubits) to perform complex computations far beyond classical capabilities with Q# language makes quantum algorithms efficiently.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="ORM" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/ORM.png" alt="ORM" title="ORM" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">ORM</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Object-Relational Mapping simplifies database interactions by mapping objects in code to database tables. It allows to use OOP to manage data without writing complex SQL queries.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="OData" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/OData.png" alt="OData" title="OData" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">OData</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Open Data Protocol is a protocol for building and consuming RESTful APIs, enabling easy querying data over HTTP. It supports filtering, sorting and pagination in URL.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="WebAPI" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/WebAPI.png" alt="MinimalAPI" title="MinimalAPI" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Minimal API</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Minimal API is a lightweight framework in .NET for building simple, high-performance web APIs with minimal code. It streamlines the development process by reducing boilerplate.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="OpenAPI" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/OpenAPI.png" alt="OpenAPI" title="OpenAPI" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">OpenAPI</p>
-
-                                            <h3 class="card-item-new-message">
-                                                OpenAPI defines RESTful APIs with a standardized format for endpoints and data models. Swagger tools enhance this with automated documentation. Both are streamline API development.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="API" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/API.png" alt="APIVersion" title="APIVersion" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">API Version</p>
-
-                                            <h3 class="card-item-new-message">
-                                                API versioning allows you to manage multiple API versions simultaneously, ensuring backward compatibility. It helps maintain stability for existing clients as new features added.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="DbDeployment" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/DbDeployment.png" alt="DbDeployment" title="DbDeployment" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">DB Deployment</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Entity Framework Migrations provides a streamlined way to manage database schema changes alongside the application code. This ensures the smooth deployments.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Resilience" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Resilience.png" alt="Resilience" title="Resilience" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Resilience</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Resilience enables robust applications by using retry policies and circuit breakers, ensuring stability in challenging environments and opt for high availability systems.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="BackgroundJobs" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/BackgroundJobs.png" alt="BackgroundJobs" title="BackgroundJobs" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Background Job</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Background jobs enable tasks to run asynchronously or on a schedule, offloading intensive processes from the main application. It improves performance in background.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="BackgroundJobsHub" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/BackgroundJobHub.png" alt="BackgroundJobsHub" title="BackgroundJobsHub" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">BackgroundJob Hub</p>
-
-                                            <h3 class="card-item-new-message">
-                                                The Background Jobs Hub provides a centralized way to monitor and control jobs. Instantly view job statuses, with built‑in support to pause and resume as needed.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="ContextAccessor" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/ContextAccessor.png" alt="ContextAccessor" title="ContextAccessor" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Context Accessor</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Context Accessor centralizes and streamlines access to real‑time user details, client information, and security data, bringing everything together in one unified place.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Log" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Log.png" alt="Log" title="Log" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Logger</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Logger provides structured logging, allowing developers to capture detailed logs. It supports various log sinks, making it easy to route logs to files, databases, or external systems.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Exception" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Exception.png" alt="Exceptoin" title="Exceptoin" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Exception Handler</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Global exception handling standardizes error responses using RFC 7807 Problem Details, offering clear, structured information for better debugging and client communication.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="HealthCheck" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/HealthCheck.png" alt="HealthCheck" title="HealthCheck" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Health Check</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Health checks monitor application status, including dependencies and resources, providing insights into system health for proactive maintenance and better reliability.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="CPM" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/CPM.png" alt="CPM" title="CPM" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">CPM</p>
-
-                                            <h3 class="card-item-new-message">
-                                                NuGet's central package management (CPM) simplifies managing dependencies for multi-project solutions. It offers single location for various projects.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Dotnet" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Dotnet.png" alt="DotNet" title="DotNet" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">.NET</p>
-
-                                            <h3 class="card-item-new-message">
-                                                .NET (8+) is a cross-platform, open source and powerful development framework that supports building applications across various platforms and opts for modern development.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="Tools" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/Tools.png" alt="Tools" title="Tools" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Tools</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Development tools like VS Code, Visual Studio, Rider, ReSharper, NuGet and Git streamline coding, debugging, deployment and boosting productivity enormously.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="ModernPattern" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/ModernPattern.png" alt="ModernPattern" title="ModernPattern" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Modern Pattern</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Modern software principles, design patterns, Mediator, CQRS, Event Sourcing, Repository, DDD and SDD, promote scalability, maintainability and flexibility in building robust applications.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="ModernDevelopment" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/ModernDevelopment.png" alt="ModernDevelopment" title="ModernDevelopment" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Modern Development</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Supports Modern software development with AI boosts speed and quality. Spec-Driven Development (SDD) ensures clarity and alignment by building software from well specifications.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="ProjectManagement" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/ProjectManagement.png" alt="ProjectManagement" title="ProjectManagement" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">Project Management</p>
-
-                                            <h3 class="card-item-new-message">
-                                                Supports ease the project management with modern concepts for project life cycle, enhancing team productivity and project delivery speedy.
-                                            </h3>
-                                        </div>
-
-                                        <div class="card-item swiper-slide">
-                                            <a title="More" class="bannerimage hidelinkself">
-                                                <img src="images/TechIcon/More.png" alt="More" title="More" width="54" height="52" style="background-color: #fff; padding: 5px; border-radius: 5px; margin-bottom: 5px " />&nbsp;
-                                            </a>
-                                            <p class="card-item-new-message-header">More</p>
-
-                                            <h3 class="card-item-new-message">
-                                                To Be Continued
-                                            </h3>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="swiper-pagination" style="font:1px"></div>
-                                    <div class="swiper-slide-button swiper-button-prev" style="font:1px"></div>
-                                    <div class="swiper-slide-button swiper-button-next" style="font:1px"></div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Gallery</h2>
+                <p class="section-subtitle">Visual showcase of DeltaFramework components and features</p>
+            </div>
+
+            <div class="gallery-slider">
+                <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-Libraries.png" alt="DeltaFramework Libraries"
+                                        loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>Framework Libraries</h3>
+                                    <p>Comprehensive library collection with NuGet integration for seamless development
+                                        workflow.</p>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Features Content -->
-        <div id="features-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-Libraries-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img style="padding: 0 0 0 0" src="images/TechIcon/NuGet.png" alt="NuGet" title="NuGet" width="30" height="30" /> Framework Library</h2>
-                                    <p>
-                                        <b>
-                                            Libraries are a core component of DeltaFramework, offering substantial benefits with minimal development effort.
-                                            It is designed for efficiency and seamless usage.
-                                            By adhering to NuGet standards, these libraries ensure easy integration and management.
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-Libraries.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-ProjectTemplate-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img src="images/TechIcon/Templates.png" alt="Templates" title="Templates" width="27" height="25" /> Project Template</h2>
-                                    <p>
-                                        <b>
-                                            Project Templates facilitate the creation of technical projects with a
-                                            single click, supporting various architecture styles
-                                            including:<br>
-                                            <span style="color: #C70039;">
-                                                <img src="images/TechIcon/N-TierArc.png" alt="N-Tier" width="19" height="20"> N-Tier &nbsp
-                                                <img src="images/TechIcon/OnionArc.png" alt="Onion" width="19" height="20"> Onion &nbsp
-                                                <img src="images/TechIcon/CleanArc.png" alt="Clean" width="19" height="20"> Clean &nbsp
-                                                <img src="images/TechIcon/VerticalSlice.png" alt="Vertical Slice" width="19" height="20"> Vertical Slice &nbsp
-                                                <img src="images/TechIcon/Microservices.png" alt="Vertical Slice" width="19" height="20"> Microservice &nbsp
-                                                <img src="images/TechIcon/ModularMonolith.png" alt="Vertical Slice" width="19" height="20"> Modular Monolith &nbsp
-                                            </span>
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-ProjectTemplate.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-AI 1-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img src="images/TechIcon/AI.png" alt="DeltaFramework-AI" title="DeltaFramework-AI" width="27" height="25" /> AI-Proprietary Models</h2>
-                                    <p>
-                                        <b>
-                                            DeltaFramework is seamlessly designed to integrate AI capabilities without requiring a single line of source code in the application.
-                                            It supports various proprietary AI service providers such as OpenAI ChatGPT, Azure OpenAI, GitHub Copilot, Copilot and Gemini along with many AI models.
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-AI-PM.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-AI 2-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img src="images/TechIcon/AI.png" alt="DeltaFramework-AI" title="DeltaFramework-AI" width="27" height="25" /> AI-OpenSource Models</h2>
-                                    <p>
-                                        <b>
-                                            DeltaFramework is seamlessly designed to integrate AI capabilities without requiring a single line of source code in the application.
-                                            It supports various open-source AI models, such as DeepSeek-R1, Llama, Phi, Mistral and Gemma.
-                                            Moreover, it can be hosted in the own on-premises environments.
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-AI-OM.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-RAG 1-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img src="images/TechIcon/AI.png" alt="DeltaFramework-AI-RAG-Ingest" title="DeltaFramework-AI-RAG-Ingest" width="27" height="25" /> AI-RAG Ingest</h2>
-                                    <p>
-                                        <b>
-                                            DeltaFramework is seamlessly designed to integrate RAG into the applications. RAG (Retrieval-Augmented Generation) combines AI's creativity with real-time data lookup for accurate answers.
-                                            It first retrieves relevant facts from sources, then generates responses—reducing errors and keeping knowledge fresh.
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-AI-RAG-Ingest.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-RAG 2-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img src="images/TechIcon/AI.png" alt="DeltaFramework-AI-RAG-Prompt" title="DeltaFramework-AI-RAG-Prompt" width="27" height="25" /> AI-RAG Prompt</h2>
-                                    <p>
-                                        <b>
-                                            DeltaFramework is seamlessly designed to integrate RAG into the applications. RAG (Retrieval-Augmented Generation) combines AI's creativity with real-time data lookup for accurate answers.
-                                            It first retrieves relevant facts from sources, then generates responses—reducing errors and keeping knowledge fresh.
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-AI-RAG-Prompt.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-
-
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-Libraries-PerformanceInsight 1-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img src="images/TechIcon/Performance.png" alt="Performance" title="Performance" width="27" height="25" /> Performance Insight</h2>
-                                    <p>
-                                        <b>
-                                            The design goal of the DeltaFramework startup duration is below 1000 Milliseconds. It is meticulously designed for high-performance, offering an array of built-in features while consistently maintaining high efficiency.
-                                            Each version aims to elevate user experience and streamline application development, ensuring optimal functionality and responsiveness.
-                                            Below is a comparison of different library versions.
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-Libraries-PerformanceInsight.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-Libraries-PerformanceInsight-latest 2-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img src="images/TechIcon/Performance.png" alt="Performance" title="Performance" width="27" height="25" /> Performance Insight</h2>
-                                    <p>
-                                        <b>
-                                            DeltaFramework library v11.0.0 version offers significant performance enhancements, numerous built-in features, and optimized efficiency. Dive into the detailed multiple rounds of performance insights to understand how DeltaFramework continues to set new standards in high-performance design. <br>
-                                            Startup Duration: <span style="color:#C70039;">
-                                                193 Milliseconds
-                                                <img src="images/TechIcon/Fire.gif" alt="🔥" width="22" height="22">
-                                                <img src="images/TechIcon/Rocket.gif" alt="🚀" width="22" height="22">
-                                            </span>
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text &#128293;&#128640;</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-Libraries-PerformanceInsight-latest.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-App-PerformanceInsight 1-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img src="images/TechIcon/Performance.png" alt="Performance" title="Performance" width="27" height="25" /> Performance Insight</h2>
-                                    <p>
-                                        <b>
-                                            The DeltaFramework App is engineered for exceptional performance. During a load test conducted on a local PC, it delivered outstanding results without any failures or system burdens.
-                                            It successfully processed 4 million requests in one minute without a single failure. The outcome may vary depending on the environment.
-                                            <br><span style="color:#2980B9;">Environment: </span>
-                                            <br>1 PC (App Server + DB Server + Load Testing Tool), CPU: 5.80 GHz, RAM: 32 GB (181 MB Used)
-                                            <br><span style="color:#2980B9;">Result: </span>
-                                            <br>Total http requests 41,85,435 in 60 seconds and 69,747 in 1 second, 0 failed.
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-App-PerformanceInsight1.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <!-- Box DeltaFramework-App-PerformanceInsight-latest 2-->
-                        <section class="box feature">
-                            <div class="inner">
-                                <header>
-                                    <h2><img src="images/TechIcon/Performance.png" alt="Performance" title="Performance" width="27" height="25" /> Performance Insight</h2>
-                                    <p>
-                                        <b>
-                                            The DeltaFramework App is engineered for exceptional performance. During a load test conducted on a local PC, it delivered outstanding results without any failures or system burdens.
-                                            It successfully processed 1 million requests in one minute without a single failure. The outcome may vary depending on the environment.
-                                            <br><span style="color:#2980B9;">Environment: </span>
-                                            <br>1 PC (App Server + DB Server + Load Testing Tool), CPU: 5.80 GHz, RAM: 32 GB (386 MB Used)
-                                            <br><span style="color:#2980B9;">Result: </span>
-                                            <br>Total http requests 10,22,274 in 60 seconds and 17,038 in 1 second, 0 failed.
-                                        </b>
-                                    </p>
-                                </header>
-                                <!--<p>Text &#128293;&#128640;</p>-->
-                            </div>
-                            <a href="#" onClick="return false;" class="image featured">
-                                <img src="images/DeltaFramework-App-PerformanceInsight2.png" alt="" />
-                            </a>
-                        </section>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Banner Bottom Content 1 :  Author-->
-        <div id="banner-wrapper">
-            <div id="banner" class="box container">
-                <div class="row" style="align-items: flex-end;text-align: center; text-justify: inter-word;">
-                    <div class="col-7dummy col-12-medium">
-                        <h3 style="font-size: 1.50em;">
-                            Author
-                        </h3>
-                        <p style="text-align:center">
-                            <img style="border-radius: 5px;" src="images/TechIcon/TVM.png" alt="Admin" width="90" height="90"><br>
-                            <b style="color: #3B3B3C ">
-                                Thiruvarasamurthy G
-                            </b><br>
-                            <h3>
-                                <b style="color: #3B3B3C ">
-                                    IT Architect and Core Developer
-                                </b>
-                            </h3>
-                        </p>
-                        <p style="text-align: center;text-shadow: 1px 1px 1px #f3f3f3;">
-                            <b>
-                                The creator of the DeltaFramework, driven by a passion for designing modern, robust, architecture, core development and scalable systems.
-                                For more information, please visit the author's website at <a style="text-decoration: none;" href="https://thirufactory.com" target="_blank">https://thirufactory.com</a>
-                            </b>
-                        </p>
-                    </div>
-                    <div class="col-5 col-12-medium1" style="margin: auto;">
-                        <ul>
-                            <li>
-                                <a href="https://www.thirufactory.com/p/about-me.html"
-                                   target="_blank" class="button">
-                                    More Info
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <!-- Banner Bottom Content 2 : News Slider-->
-        <div id="banner-wrapper">
-            <div id="banner" class="box container">
-                <div class="row" style="align-items: flex-end;text-align: center; text-justify: inter-word;">
-                    <div class="col-7dummy col-12-medium">
-                        <h3 style="font-size: 1.50em;">
-                            News
-                        </h3>
-                        <div class="slider-panel">
-                            <div class="container swiper">
-                                <div class="slider-wrapper">
-                                    <div class="card-list-center swiper-wrapper">
-                                        <div class="card-item-center swiper-slide">
-                                            <p class="card-item-new-message-header">DeltaFramework v11.0.0 released</p>
-                                        </div>
-                                        <div class="card-item-center swiper-slide">
-                                            <p class="card-item-new-message-header">MCP Integrated and supports MultiAuthentication</p>
-                                        </div>
-                                        <div class="card-item-center swiper-slide">
-                                            <p class="card-item-new-message-header">Added built-in Mapper, Mediator, Validator</p>
-                                        </div>
-                                        <div class="card-item-center swiper-slide">
-                                            <p class="card-item-new-message-header">Added BackgroundService, SSE(Server-Send Events), Resilience </p>
-                                        </div>
-                                        <div class="card-item-center swiper-slide">
-                                            <p class="card-item-new-message-header">Added ContextAccessor, Configuration</p>
-                                        </div>
-                                        <div class="card-item-center swiper-slide">
-                                            <p class="card-item-new-message-header">Added new plugin for Quantum Computing operations</p>
-                                        </div>
-                                        <div class="card-item-center swiper-slide">
-                                            <p class="card-item-new-message-header">WIP: Next DeltaFramework version</p>
-                                        </div>
-                                        <!--<div class="card-item swiper-slide">
-        <img src="images/img-2.jpg" alt="card Image" class="card-image">
-        <h2 class="card-name">Sarah Johnson</h2>
-        <p class="card-profession">Graphic Designer</p>
-        <button class="message-button">Message</button>
-    </div>-->
-                                    </div>
-
-                                    <div class="swiper-pagination" style="font:1px"></div>
-                                    <div class="swiper-slide-button swiper-button-prev" style="font:1px"></div>
-                                    <div class="swiper-slide-button swiper-button-next" style="font:1px"></div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-ProjectTemplate.png" alt="Project Templates"
+                                        loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>Project Templates</h3>
+                                    <p>Ready-to-use templates for various architecture patterns including Clean
+                                        Architecture and Microservices.</p>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-AI-PM.png" alt="AI Integration" loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>AI Integration</h3>
+                                    <p>Seamless integration with proprietary and open-source AI models for intelligent
+                                        applications.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-AI-OM.png" alt="Open Source AI" loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>Open Source AI Models</h3>
+                                    <p>Support for leading open-source AI models with on-premises deployment
+                                        capabilities.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-AI-RAG-Ingest.png" alt="RAG Ingest" loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>RAG Ingest Pipeline</h3>
+                                    <p>Efficient data ingestion pipeline for Retrieval-Augmented Generation systems.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-AI-RAG-Prompt.png" alt="RAG Prompt" loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>RAG Prompt System</h3>
+                                    <p>Advanced prompt engineering with context-aware response generation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 7 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-Libraries-PerformanceInsight.png"
+                                        alt="Performance Metrics" loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>Performance Metrics</h3>
+                                    <p>Real-time performance monitoring and optimization insights for applications.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 8 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-App-PerformanceInsight1.png" alt="Load Testing"
+                                        loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>Load Testing Results</h3>
+                                    <p>Comprehensive load testing with 4M+ requests per minute capacity demonstration.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Navigation -->
+                    <div class="gallery-navigation">
+                        <button class="gallery-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="swiper-pagination gallery-pagination"></div>
+                        <button class="gallery-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <br>
-        <!-- Banner Bottom Content 3 : YouTube & Share-->
-        <br>
-        <div id="banner-wrapper">
-            <div id="banner" class="box container">
-                <div class="row" style="align-items: flex-end;text-align: center; text-justify: inter-word;">
-                    <div class="col-7dummy col-12-medium">
-                        <h3 style="font-size: 1.50em;">
-                            Social Media
-                        </h3>
+    </section>
+
+    <!-- Author Section -->
+    <section class="author" id="author">
+        <div class="container">
+            <div class="section-title">
+                <h2>About the Author</h2>
+                <p class="section-subtitle">The creator behind DeltaFramework</p>
+            </div>
+
+            <div class="author-card">
+                <div class="author-header">
+                    <img src="images/TechIcon/TVM.png" alt="Thiruvarasamurthy G" class="author-avatar">
+                    <div class="author-info">
+                        <h3>Thiruvarasamurthy G</h3>
+                        <div class="author-title">IT Architect and Core Developer</div>
                     </div>
                 </div>
-                <center>
-                    <a href="https://www.thirufactory.com/software-framework-deltaframework.html"
-                       target="_blank" class="button">
-                        Article on ThiruFactory Portal
+
+                <div class="author-content">
+                    <p class="author-bio">The creator of the DeltaFramework, driven by a passion for designing modern,
+                        robust, architecture, core development and scalable systems. With extensive experience in
+                        enterprise software development and a focus on innovation, the author combines technical
+                        expertise with practical implementation strategies.</p>
+
+                    <div class="author-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Software Architecture Expert</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>Framework Expert</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Integration Expert</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="author-actions">
+                    <a href="https://www.thirufactory.com" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-globe"></i> Visit Website
                     </a>
-                </center>
-                <br>
-
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/DeaySbu6YF8?rel=0" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a href="https://www.thirufactory.com/p/about-me.html" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-user"></i> More Information
+                    </a>
+                    <a href="https://www.thirufactory.com/p/contact.html" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <br>
+    <!-- News Section -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest News & Updates</h2>
+                <p class="section-subtitle">Stay updated with the latest developments and releases</p>
+            </div>
 
-                <div class="row" style="align-items: flex-end;text-align: center; text-justify: inter-word;">
-                    <div style="margin: auto;">
-                        <ul>
-                            <li>
-                                <p style="text-align:center">
-                                    <img style="border-radius: 20px; margin-bottom: 15px;" src="images/TechIcon/Share.png" alt="Share" width="130" height="40">
-                                </p>
-                                <a title="Copy" class="sharebutton hidelinkself" onClick="textCopyToClipboard()">
-                                    <img class="sharebutton" src="images/TechIcon/Copy.png" alt="Copy" />
-                                </a>
-                                <a title="WhatsApp" class="sharebutton hidelink" target="_blank"
-                                   href="https://api.whatsapp.com/send?text=DeltaFramework: A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects Author: Thiruvarasamurthy G:+https://www.deltaframework.net">
-                                    <img class="sharebutton" src="images/TechIcon/Whatsapp.png" alt="WhatsApp" />
-                                </a>
-                                <a title="Telegram" class="sharebutton hidelink" target="_blank"
-                                   href="https://telegram.me/share/url?url=https://www.deltaframework.net&text=DeltaFramework: A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects Author: Thiruvarasamurthy G">
-                                    <img class="sharebutton" src="images/TechIcon/Telegram.png" alt="Telegram" />
-                                </a>
-                                <!--<a title="Skype" class="sharebutton hidelink" target="_blank"
-                                   href="https://web.skype.com/share?url=https://www.deltaframework.net&text=DeltaFramework: A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects Author: Thiruvarasamurthy G">
-                                    <img class="sharebutton" src="images/TechIcon/Skype.png" alt="Skype" />
-                                </a>-->
-                                <a title="Microsoft Teams" class="sharebutton hidelink" target="_blank"
-                                   href="https://teams.microsoft.com/share?href=https://www.deltaframework.net&title=DeltaFramework&text=DeltaFramework: A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects Author: Thiruvarasamurthy G">
-                                    <img class="sharebutton" src="images/TechIcon/Teams.png" alt="Microsoft Teams" />
-                                </a>
-                                <a title="Linkedin" class="sharebutton hidelink" target="_blank"
-                                   href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.deltaframework.net">
-                                    <img class="sharebutton" src="images/TechIcon/Linkedin.png" alt="Linkedin" />
-                                </a>
-                                <a title="Facebook" class="sharebutton hidelink" target="_blank"
-                                   href="https://www.facebook.com/sharer/sharer.php?u=https://www.deltaframework.net">
-                                    <img class="sharebutton" src="images/TechIcon/Facebook.png" alt="Facebook" />
-                                </a>
-                                <a title="X (Twitter)" class="sharebutton hidelink" target="_blank"
-                                   href="https://twitter.com/intent/tweet?text=DeltaFramework: A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects Author: Thiruvarasamurthy G&url=https://www.deltaframework.net">
-                                    <img class="sharebutton" src="images/TechIcon/Twitter.png" alt="X (Twitter)" />
-                                </a>
-                            </li>
-                            <li>
-                                <br>
-                                <a href="https://www.thirufactory.com/p/contact.html"
-                                   target="_blank" class="button">
-                                    Contact
-                                </a>
-                            </li>
-                        </ul>
+            <div class="news-slider">
+                <div class="swiper news-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Jan 01, 2026</div>
+                                <h3>DeltaFramework v11.1.0 Released</h3>
+                                <p>Latest version with significant performance enhancements and new features including
+                                    Mapper, Mediator, and Validator components.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Dec 15, 2025</div>
+                                <h3>MCP Integration Complete</h3>
+                                <p>Model Control Protocol integration and MultiAuthentication support added for enhanced
+                                    AI model communication.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Dec 10, 2025</div>
+                                <h3>Built-in Components Added</h3>
+                                <p>New built-in Mapper, Mediator, Validator components for simplified development
+                                    workflows and better code organization.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Dec 5, 2025</div>
+                                <h3>BackgroundService & SSE Support</h3>
+                                <p>New background services and Server-Sent Events support added for real-time
+                                    application features.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Nov 28, 2025</div>
+                                <h3>ContextAccessor Enhanced</h3>
+                                <p>Enhanced context access and configuration management for better application state
+                                    handling.</p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Nov 20, 2025</div>
+                                <h3>Quantum Computing Plugin</h3>
+                                <p>New plugin for Quantum Computing operations added, expanding framework capabilities
+                                    to quantum algorithms.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Custom Navigation -->
+                    <div class="news-navigation">
+                        <button class="news-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="swiper-pagination news-pagination"></div>
+                        <button class="news-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <br>
-        <!-- Footer Content -->
-        <div id="footer-wrapper">
-            <footer id="footer" class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div id="copyright">
-                            <ul class="menu">
-                                <li>
-                                    <!--Designed by Thiruvarasamurthy G-->
-                                    <div id="copyrightMessage">Copyright &copy; DeltaFramework 2024 - </div>
-                                    DeltaFramework Release Info:<br>
-                                    Version: 11.0.0
-                                    Date: December 22, 2025<br>
-                                    Website Release Info:<br>
-                                    Version: 5.0.0
-                                    Date: December 24, 2025<br>
-                                    All rights reserved<br>
-                                    <a class="hidelink" style="display: inline-block; margin: 0px 0px 0px 0px; text-decoration: none; -webkit-tap-highlight-color: transparent;" href="info.html" title="Credits" target="_blank"> Credits </a> |
-                                    <a class="hidelink" style="display: inline-block; margin: 0px 0px 0px 0px; text-decoration: none; -webkit-tap-highlight-color: transparent;" href="fireworks.html" title="Events" target="_blank"> Events </a>
-                                    <br>
+    </section>
 
-                                    <a class="dmca-badge hidelink" style="display: inline-block; margin: 5px 0px 0px 0px; text-decoration: none; -webkit-tap-highlight-color: transparent;" href="//www.dmca.com/Protection/Status.aspx?ID=611842cc-1486-4304-bcf9-4bfaee6ebca7"
-                                       title="DMCA.com Protection Status" target="_blank">
-                                        <img src="https://images.dmca.com/Badges/dmca-badge-w150-5x1-07.png?ID=611842cc-1486-4304-bcf9-4bfaee6ebca7" alt="DMCA.com Protection Status" />
-                                    </a>
-                                    <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script><br>
+    <!-- Social Media Section -->
+    <section class="social-media" id="social">
+        <div class="container">
+            <div class="section-title">
+                <h2>Connect & Share</h2>
+                <p class="section-subtitle">Connect with us and explore additional resources</p>
+            </div>
 
-                                    <a class="hidelinkself" style="display: inline-block; margin: 3px 0px 0px 0px; -webkit-tap-highlight-color: transparent;" width="45" height="40" onClick="scrollToTop()">
-                                        <img src="images/TechIcon/Up.png" alt="Up" width="45" height="40">
-                                    </a>
-                                </li>
-                            </ul>
+            <div class="social-content">
+                <div class="social-grid">
+                    <div class="social-video">
+                        <h3>YouTube Introduction</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/DeaySbu6YF8?rel=0" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="social-sharing">
+                        <h3>Share DeltaFramework</h3>
+                        <p class="social-description">Help others discover this powerful framework by sharing with your
+                            network.</p>
+
+                        <div class="share-buttons">
+                            <button class="share-btn copy" title="Copy Link" onclick="copyToClipboard()">
+                                <i class="fas fa-copy"></i>
+                                <span>Copy</span>
+                            </button>
+                            <a href="https://api.whatsapp.com/send?text=Check%20out%20DeltaFramework%3A%20A%20cutting-edge%2C%20modern%20and%20robust%20software%20creation%20bundle.%20https%3A%2F%2Fwww.deltaframework.net"
+                                target="_blank" class="share-btn whatsapp" title="Share on WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://telegram.me/share/url?url=https://www.deltaframework.net&text=DeltaFramework:%20A%20cutting-edge,%20modern%20and%20robust%20software%20creation%20bundle."
+                                target="_blank" class="share-btn telegram" title="Share on Telegram">
+                                <i class="fab fa-telegram"></i>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.deltaframework.net"
+                                target="_blank" class="share-btn linkedin" title="Share on LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.deltaframework.net"
+                                target="_blank" class="share-btn facebook" title="Share on Facebook">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?text=DeltaFramework:%20A%20cutting-edge,%20modern%20and%20robust%20software%20creation%20bundle.&url=https://www.deltaframework.net"
+                                target="_blank" class="share-btn twitter" title="Share on X (Twitter)">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.thirufactory.com/software-framework-deltaframework.html"
+                                target="_blank" class="btn btn-primary">
+                                <i class="fas fa-newspaper"></i> Article on ThiruFactory Portal
+                            </a>
+                            <a href="https://www.thirufactory.com/p/contact.html" target="_blank"
+                                class="btn btn-outline">
+                                <i class="fas fa-envelope"></i> Contact Author
+                            </a>
                         </div>
                     </div>
                 </div>
-            </footer>
+            </div>
         </div>
-    </div>
-    <!-- Linking SwiperJS script & custom script -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DeltaFramework</h3>
+                    <p class="footer-info">Build high-performance Software System with integrated AI capabilities and
+                        seamless development experience.</p>
+
+                    <p class="footer-info"> DeltaFramework: A cutting-edge, modern and robust software creation bundle.
+                        It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will
+                        accelerate the projects. Author & Owner: Thiruvarasamurthy G.
+                    </p>
+                </div>
+
+                <div class="footer-column version-column">
+                    <h3>Version Info</h3>
+                    <div class="footer-info">
+                        <div class="version-item">
+                            <strong>Framework Version:</strong>
+                            <span>11.1.0</span>
+                        </div>
+                        <div class="version-item">
+                            <strong>Release Date:</strong>
+                            <span>January 01, 2026</span>
+                        </div>
+                        <div class="version-item">
+                            <strong>Website Version:</strong>
+                            <span>6.0.0</span>
+                        </div>
+                        <div class="version-item">
+                            <strong>Last Updated:</strong>
+                            <span>January 01, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright &copy; DeltaFramework 2024-<span id="currentYear"></span> - All rights reserved</p>
+                <p>Designed and Developed by Thiruvarasamurthy G</p>
+
+                <!-- DMCA Badge -->
+                <div class="dmca-badge">
+                    <a class="dmca-badge hidelink"
+                        style="display: inline-block; margin: 5px 0px 0px 0px; text-decoration: none; -webkit-tap-highlight-color: transparent;"
+                        href="//www.dmca.com/Protection/Status.aspx?ID=611842cc-1486-4304-bcf9-4bfaee6ebca7"
+                        title="DMCA.com Protection Status" target="_blank">
+                        <img src="https://images.dmca.com/Badges/dmca-badge-w150-5x1-07.png?ID=611842cc-1486-4304-bcf9-4bfaee6ebca7"
+                            alt="DMCA.com Protection Status" />
+                    </a>
+                    <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script><br>
+                </div>
+                <span id="reset-consent-link" class="reset-consent" style="cursor: pointer;"> Change Cookie
+                    Preferences</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/consent.js"></script>
 </body>
+
 </html>
