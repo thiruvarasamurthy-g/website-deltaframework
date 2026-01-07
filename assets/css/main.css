@@ -120,6 +120,7 @@
     cursor: pointer;
     opacity: 0; /* hidden by default */
     transition: opacity 0.5s; /* fade-in/out effect */
+    z-index: 9999; /* Very high z-index to ensure it's on top of everything */
 }
 
     /* Visible state */
