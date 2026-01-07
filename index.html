@@ -11,8 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeltaFramework</title>
 
-    <script>
-        (function () {
+    <script>(function () {
             'use strict';
 
             try {
@@ -38,8 +37,7 @@
                 // Fallback if localStorage is blocked
                 console.warn('Theme preload failed:', error);
             }
-        })();
-    </script>
+        })();</script>
 
     <!-- SEO Meta Tags -->
     <meta property="og:site_name" content="DeltaFramework.Net">
@@ -56,16 +54,14 @@
           content="DeltaFramework, Delta Framework, Delta, Framework, Library, NuGet, .NET, .NET 8, AI Integration, RAG, Microservices, Clean Architecture, High Performance, Thiruvarasamurthy G">
     <meta name="author" content="Thiruvarasamurthy G">
 
-    <script>
-        (function () {
+    <script>(function () {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
             } else if (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
-        })();
-    </script>
+        })();</script>
 
     <!-- CSS & Image Files -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -75,8 +71,7 @@
     <link rel="icon" type="image/x-icon" href="images/DeltaFramework.png">
     <!-- JS Files -->
     <!-- Google tag (gtag.js) -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <script>window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
 
         gtag('consent', 'default', {
@@ -87,8 +82,7 @@
         });
 
         gtag('js', new Date());
-        gtag('config', 'G-VYGHJ6X08E');
-    </script>
+        gtag('config', 'G-VYGHJ6X08E');</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYGHJ6X08E"></script>
 </head>
 
@@ -151,7 +145,10 @@
                             <i class="fas fa-layer-group"></i> Multiple Architectures
                         </div>
                         <div class="badge">
-                            <i class="fas fa-expand-arrows-alt"></i>Vibe & Spec‑Driven Coding
+                            <i class="fas fa-code"></i>Vibe Coding
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-code"></i>Spec‑Driven Coding
                         </div>
                         <div class="badge">
                             <i class="fas fa-expand-arrows-alt"></i>Scalable
