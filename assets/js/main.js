@@ -1,5 +1,5 @@
 /*
-    Copyright (c) DeltaFramework
+    (c) thirufactory.com. All rights reserved.
     Author: Thiruvarasamurthy G, IT Architect and Core Developer
     https://www.thirufactory.com
 */
@@ -34,16 +34,38 @@ function init() {
 
     // Initialize header scroll effect
     initHeaderScroll();
+
+    // Initialize header scroll effect
+    initBackToTop();
 }
 
-// Theme Management
+// Theme Management - UPDATED with DOM ready check
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
+    // Get current theme from HTML attribute (already set in <head>)
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    updateThemeIcon(currentTheme);
+
+    // Wait for DOM to be ready before attaching event listener
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            setupThemeToggle();
+        });
+    } else {
+        setupThemeToggle();
+    }
+}
+
+// Separate function to set up the toggle button
+function setupThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle'); // Make sure button has this ID
+
+    if (!themeToggle) {
+        console.error('Theme toggle button not found!');
+        return;
+    }
 
     themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
         document.documentElement.setAttribute('data-theme', newTheme);
@@ -59,9 +81,10 @@ function initTheme() {
 }
 
 function updateThemeIcon(theme) {
-    const icon = themeToggle.querySelector('i');
-    icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-    themeToggle.setAttribute('aria-label', `Switch to ${theme === 'light' ? 'dark' : 'light'} mode`);
+    const icon = document.querySelector('.theme-toggle i');
+    if (icon) {
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
 }
 
 // Mobile Menu
@@ -432,6 +455,42 @@ function initHeaderScroll() {
         }
 
         lastScroll = currentScroll;
+    });
+}
+
+// Back to Top
+function initBackToTop() {
+    const backToTop = document.getElementById("backToTop");
+    const header = document.querySelector('header');
+
+    // Show button after scrolling 200px
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+
+    // Smooth scroll to top when clicked
+    backToTop.addEventListener("click", () => {
+        // Reset header to visible state immediately
+        header.style.transform = 'translateY(0)';
+        header.style.boxShadow = 'var(--shadow-sm)';
+        header.style.backdropFilter = 'blur(20px)';
+        header.style.opacity = '1';
+        header.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+
+        // Scroll to top
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        // Remove the forced transition after scroll completes
+        setTimeout(() => {
+            header.style.transition = '';
+        }, 500);
     });
 }
 

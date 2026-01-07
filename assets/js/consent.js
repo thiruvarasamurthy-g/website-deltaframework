@@ -1,5 +1,5 @@
 /*
-    Copyright (c) DeltaFramework
+    (c) thirufactory.com. All rights reserved.
     Author: Thiruvarasamurthy G, IT Architect and Core Developer
     https://www.thirufactory.com
 */
