@@ -113,6 +113,10 @@
 
 /* Style for the back-to-top image */
 #backToTop {
+    -webkit-tap-highlight-color: transparent; /* iOS Safari / Chrome */
+    -webkit-user-select: none; /* prevent text/image selection */
+    -webkit-touch-callout: none; /* disable long-press callout */
+    outline: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
