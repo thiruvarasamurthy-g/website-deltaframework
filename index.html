@@ -11,7 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeltaFramework</title>
 
-    <script>(function () {
+    <script>
+        (function () {
             'use strict';
 
             try {
@@ -54,7 +55,8 @@
           content="DeltaFramework, Delta Framework, Delta, Framework, Library, NuGet, .NET, .NET 8, AI Integration, RAG, Microservices, Clean Architecture, High Performance, Thiruvarasamurthy G">
     <meta name="author" content="Thiruvarasamurthy G">
 
-    <script>(function () {
+    <script>
+        (function () {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
@@ -71,7 +73,8 @@
     <link rel="icon" type="image/x-icon" href="images/DeltaFramework.png">
     <!-- JS Files -->
     <!-- Google tag (gtag.js) -->
-    <script>window.dataLayer = window.dataLayer || [];
+    <script>
+        window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
 
         gtag('consent', 'default', {
@@ -87,7 +90,7 @@
 </head>
 
 <body>
-    <!-- Fixed Header -->
+    <!-- Fixed Header-->
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
@@ -114,6 +117,34 @@
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
+            </div>
+        </div>
+
+        <!-- HOT ANNOUNCEMENT - MOVED INSIDE HEADER (AFTER header-container) -->
+        <div class="hot-announcement-wrapper">
+            <div class="container">
+                <div class="hot-announcement">
+                    <div class="announcement-content">
+                        <div class="hot-badge pulse">
+                            <span class="hot-icon">🔥</span>
+                            <span class="hot-text">NEW RELEASE</span>
+                        </div>
+                        <div class="announcement-message">
+                            <span class="message-highlight">DeltaFramework v11.4.0</span>
+                            <span class="message-text">with External Logins (Google, Facebook, Twitter) with OAuth PKCE and Dashboard UI app</span>
+                        </div>
+                    </div>
+                    <div class="announcement-actions">
+                        <a href="#features" class="announcement-link">
+                            <span>Learn more</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <span class="announcement-badge">✨ New</span>
+                    </div>
+                    <button class="announcement-close" aria-label="Close announcement">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -695,7 +726,7 @@
                     </div>
                     <h3>Project Management</h3>
                     <p>
-                        Supports ease the project management with modern concepts for project life cycle, enhancing team
+                        Supports ease the AI-Driven project management with modern concepts,
                         productivity and project delivery speedy.
                     </p>
                 </article>
@@ -836,6 +867,34 @@
                         <li><i class="fas fa-check"></i> Startup Duration: 193 Milliseconds</li>
                         <li><i class="fas fa-check"></i> Numerous built-in features</li>
                         <li><i class="fas fa-check"></i> Optimized efficiency</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 9 -->
+                <article class="feature-card">
+                    <div class="feature-icon externalloing-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>External Logins with OAuth PKCE</h3>
+                    <p>Supports for External Logins (Google, Facebook, Twitter) with OAuth PKCE.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Secure authentication with OAuth PKCE</li>
+                        <li><i class="fas fa-check"></i> Integrated modern identity management seamlessly</li>
+                        <li><i class="fas fa-check"></i> Enhances user experience with secure sign‑in flows</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 10 -->
+                <article class="feature-card">
+                    <div class="feature-icon dashboard-icon">
+                        <i class="fa fa-desktop"></i>
+                    </div>
+                    <h3>Integrated Dashboard UI</h3>
+                    <p>DeltaFramework provids Dashboard UI application for monitoring and controlling various components.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Monitor and control BackgroundJobs</li>
+                        <li><i class="fas fa-check"></i> Monitor and control REST API Calls</li>
+                        <li><i class="fas fa-check"></i> Monitor and control ReverseProxy and DistributedCache Servers</li>
                     </ul>
                 </article>
             </div>
@@ -1064,7 +1123,7 @@
                                          alt="Performance Metrics" loading="lazy">
                                 </div>
                                 <div class="gallery-content">
-                                    <h3>Performance Metrics</h3>
+                                    <h3>Performance Metrics 1</h3>
                                     <p>Real-time performance monitoring and optimization insights for applications.</p>
                                 </div>
                             </div>
@@ -1078,7 +1137,7 @@
                                          alt="Performance Metrics" loading="lazy">
                                 </div>
                                 <div class="gallery-content">
-                                    <h3>Performance Metrics</h3>
+                                    <h3>Performance Metrics 2</h3>
                                     <p>Real-time performance monitoring and optimization insights for applications.</p>
                                 </div>
                             </div>
@@ -1099,17 +1158,102 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Slide 10 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-Dashboard-BackgroundJob.png" alt="Load Testing"
+                                         loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>BackgroundJob Dashboard</h3>
+                                    <p>
+                                        Dashboard UI application for monitoring and controlling DeltaFramework’s real‑time background jobs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 11 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-Dashboard-ExternalLogin1.png" alt="Load Testing"
+                                         loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>ExternalLogin Dashboard 1</h3>
+                                    <p>
+                                        Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 12 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-Dashboard-ExternalLogin2.png" alt="Load Testing"
+                                         loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>ExternalLogin Dashboard 2</h3>
+                                    <p>
+                                        Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 13 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-Dashboard-ExternalLogin3.png" alt="Load Testing"
+                                         loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>ExternalLogin Dashboard 3</h3>
+                                    <p>
+                                        Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 14 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-Dashboard-ExternalLogin4.png" alt="Load Testing"
+                                         loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>ExternalLogin Dashboard 3</h3>
+                                    <p>
+                                        Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Custom Navigation -->
+                    <!-- Gallery Navigation - Two-line layout -->
                     <div class="gallery-navigation">
-                        <button class="gallery-prev">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
+                        <!-- First line: Pagination dots -->
                         <div class="swiper-pagination gallery-pagination"></div>
-                        <button class="gallery-next">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
+
+                        <!-- Second line: Control buttons -->
+                        <div class="gallery-controls">
+                            <button class="gallery-prev" aria-label="Previous slide">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+
+                            <button class="gallery-play-pause" id="galleryPlayPause" data-tooltip="Pause autoplay" aria-label="Pause autoplay">
+                                <i class="fas fa-pause"></i>
+                            </button>
+
+                            <button class="gallery-next" aria-label="Next slide">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1152,7 +1296,7 @@
                         </div>
                         <div class="detail-item">
                             <i class="fas fa-brain"></i>
-                            <span>AI Integration Expert</span>
+                            <span>AI Expert</span>
                         </div>
                     </div>
                 </div>
@@ -1185,11 +1329,11 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <article class="news-card">
-                                <div class="news-date">Jan 07, 2026</div>
-                                <h3>DeltaFramework v11.2.0 Released</h3>
+                                <div class="news-date">Feb 14, 2026</div>
+                                <h3>DeltaFramework v11.4.0 Released</h3>
                                 <p>
-                                    Latest version with significant performance enhancements and new features including
-                                    Mapper, Mediator, and Validator components.
+                                    Added Supports with External Logins (Google, Facebook, Twitter)  with OAuth PKCE.<br>
+                                    Added Dashboard UI application.
                                 </p>
                             </article>
                         </div>
@@ -1250,15 +1394,25 @@
                         </div>
                     </div>
 
-                    <!-- Custom Navigation -->
+                    <!-- News Navigation - Two-line layout -->
                     <div class="news-navigation">
-                        <button class="news-prev">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
+                        <!-- First line: Pagination dots -->
                         <div class="swiper-pagination news-pagination"></div>
-                        <button class="news-next">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
+
+                        <!-- Second line: Control buttons -->
+                        <div class="news-controls">
+                            <button class="news-prev" aria-label="Previous slide">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+
+                            <button class="news-play-pause" id="newsPlayPause" data-tooltip="Pause autoplay" aria-label="Pause autoplay">
+                                <i class="fas fa-pause"></i>
+                            </button>
+
+                            <button class="news-next" aria-label="Next slide">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1362,19 +1516,19 @@
                     <div class="footer-info">
                         <div class="version-item">
                             <strong>Framework Version:</strong>
-                            <span>11.2.0</span>
+                            <span>11.4.0</span>
                         </div>
                         <div class="version-item">
                             <strong>Release Date:</strong>
-                            <span>January 07, 2026</span>
+                            <span>February 14, 2026</span>
                         </div>
                         <div class="version-item">
                             <strong>Website Version:</strong>
-                            <span>8.0.0</span>
+                            <span>9.0.0</span>
                         </div>
                         <div class="version-item">
                             <strong>Last Updated:</strong>
-                            <span>January 15, 2026</span>
+                            <span>February 14, 2026</span>
                         </div>
                     </div>
                 </div>

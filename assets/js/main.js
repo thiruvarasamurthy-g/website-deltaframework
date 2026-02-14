@@ -37,6 +37,11 @@ function init() {
 
     // Initialize header scroll effect
     initBackToTop();
+
+    // Initialize Hot Announcement
+    initHotAnnouncement();
+
+    initHeaderSpacing();
 }
 
 // Theme Management - UPDATED with DOM ready check
@@ -97,6 +102,13 @@ function initMobileMenu() {
 
         // Prevent body scroll when menu is open
         document.body.style.overflow = isExpanded ? 'hidden' : '';
+
+        // FIX: Adjust mobile menu position based on announcement presence
+        const announcement = document.querySelector('.hot-announcement-wrapper');
+        if (announcement && window.innerWidth <= 768) {
+            const announcementHeight = announcement.offsetHeight;
+            navLinks.style.top = `calc(100% + ${announcementHeight + 10}px)`;
+        }
     });
 
     // Close menu when clicking on a link
@@ -160,7 +172,7 @@ function initSmoothScrolling() {
 
 // Swiper Sliders
 function initSwiper() {
-    // Gallery Swiper - Only show one card at a time
+    // Gallery Swiper
     const gallerySwiper = new Swiper('.gallery-swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -168,6 +180,7 @@ function initSwiper() {
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true, // Add this for better UX
         },
         pagination: {
             el: '.gallery-pagination',
@@ -179,11 +192,13 @@ function initSwiper() {
             prevEl: '.gallery-prev',
         },
         breakpoints: {
-            640: {
-                slidesPerView: 1,
-            },
-            1024: {
-                slidesPerView: 1,
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 1 }
+        },
+        on: {
+            init: function () {
+                // Store swiper instance globally
+                this.el.swiper = this;
             }
         }
     });
@@ -196,6 +211,7 @@ function initSwiper() {
         autoplay: {
             delay: 6000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true, // Add this for better UX
         },
         pagination: {
             el: '.news-pagination',
@@ -207,17 +223,24 @@ function initSwiper() {
             prevEl: '.news-prev',
         },
         breakpoints: {
-            640: {
-                slidesPerView: 1.5,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
+            640: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        },
+        on: {
+            init: function () {
+                // Store swiper instance globally
+                this.el.swiper = this;
             }
         }
     });
+
+    // Store instances globally for play/pause controls
+    window.gallerySwiper = gallerySwiper;
+    window.newsSwiper = newsSwiper;
+
+    // Initialize play/pause controls after swipers are created
+    initSliderControls();
 }
 
 // Animations
@@ -493,6 +516,177 @@ function initBackToTop() {
         }, 500);
     });
 }
+
+function initHotAnnouncement() {
+    const closeBtn = document.querySelector('.announcement-close');
+    const announcementWrapper = document.querySelector('.hot-announcement-wrapper');
+
+    // Check if announcement was previously closed
+    const isAnnouncementClosed = localStorage.getItem('hotAnnouncementClosed');
+
+    if (isAnnouncementClosed && announcementWrapper) {
+        announcementWrapper.style.display = 'none';
+        document.body.classList.remove('has-announcement');
+    }
+
+    // Close button functionality
+    if (closeBtn && announcementWrapper) {
+        closeBtn.addEventListener('click', function () {
+            announcementWrapper.style.animation = 'slideUp 0.3s ease forwards';
+
+            // Store in localStorage that announcement was closed
+            localStorage.setItem('hotAnnouncementClosed', 'true');
+            document.body.classList.remove('has-announcement');
+
+            setTimeout(() => {
+                announcementWrapper.style.display = 'none';
+                // Re-adjust spacing after announcement is hidden
+                if (typeof initHeaderSpacing === 'function') {
+                    initHeaderSpacing();
+                }
+            }, 280);
+        });
+    }
+
+    // Add slideUp animation if not exists
+    if (!document.querySelector('#hot-announcement-styles')) {
+        const style = document.createElement('style');
+        style.id = 'hot-announcement-styles';
+        style.textContent = `
+            @keyframes slideUp {
+                from {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
+function initHeaderSpacing() {
+    const header = document.querySelector('header');
+    const announcement = document.querySelector('.hot-announcement-wrapper');
+    const body = document.body;
+
+    function adjustSpacing() {
+        if (window.innerWidth > 768) {
+            // Desktop: Use body padding to push content below fixed header
+            const headerHeight = header ? header.offsetHeight : 80;
+            body.style.paddingTop = headerHeight + 'px';
+
+            if (announcement && announcement.style.display !== 'none') {
+                body.classList.add('has-announcement');
+            } else {
+                body.classList.remove('has-announcement');
+            }
+        } else {
+            // Mobile: Remove body padding, header is relative
+            body.style.paddingTop = '0';
+            body.classList.remove('has-announcement');
+        }
+    }
+
+    // Adjust on load
+    adjustSpacing();
+
+    // Adjust on resize
+    window.addEventListener('resize', adjustSpacing);
+
+    // Adjust when announcement is closed
+    if (announcement) {
+        const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                if (mutation.attributeName === 'style') {
+                    adjustSpacing();
+                }
+            });
+        });
+
+        observer.observe(announcement, { attributes: true });
+    }
+}
+
+// Initialize Play/Pause controls for sliders
+function initSliderControls() {
+    // Gallery slider controls
+    const galleryPlayPause = document.getElementById('galleryPlayPause');
+    const newsPlayPause = document.getElementById('newsPlayPause');
+
+    // Get swiper instances (store them when initializing)
+    let gallerySwiper = null;
+    let newsSwiper = null;
+
+    // Find swiper instances from your existing code
+    document.querySelectorAll('.gallery-swiper').forEach(el => {
+        if (el.swiper) gallerySwiper = el.swiper;
+    });
+
+    document.querySelectorAll('.news-swiper').forEach(el => {
+        if (el.swiper) newsSwiper = el.swiper;
+    });
+
+    // Gallery play/pause
+    if (galleryPlayPause && gallerySwiper) {
+        let isGalleryPlaying = true;
+
+        galleryPlayPause.addEventListener('click', function () {
+            if (isGalleryPlaying) {
+                // Pause autoplay
+                gallerySwiper.autoplay.stop();
+                this.classList.add('paused');
+                this.innerHTML = '<i class="fas fa-play"></i>';
+                this.setAttribute('data-tooltip', 'Play autoplay');
+                this.setAttribute('aria-label', 'Play autoplay');
+                isGalleryPlaying = false;
+            } else {
+                // Resume autoplay
+                gallerySwiper.autoplay.start();
+                this.classList.remove('paused');
+                this.innerHTML = '<i class="fas fa-pause"></i>';
+                this.setAttribute('data-tooltip', 'Pause autoplay');
+                this.setAttribute('aria-label', 'Pause autoplay');
+                isGalleryPlaying = true;
+            }
+        });
+
+        // Store state in swiper instance for access elsewhere
+        gallerySwiper.playPauseState = { isPlaying: true, button: galleryPlayPause };
+    }
+
+    // News play/pause
+    if (newsPlayPause && newsSwiper) {
+        let isNewsPlaying = true;
+
+        newsPlayPause.addEventListener('click', function () {
+            if (isNewsPlaying) {
+                // Pause autoplay
+                newsSwiper.autoplay.stop();
+                this.classList.add('paused');
+                this.innerHTML = '<i class="fas fa-play"></i>';
+                this.setAttribute('data-tooltip', 'Play autoplay');
+                this.setAttribute('aria-label', 'Play autoplay');
+                isNewsPlaying = false;
+            } else {
+                // Resume autoplay
+                newsSwiper.autoplay.start();
+                this.classList.remove('paused');
+                this.innerHTML = '<i class="fas fa-pause"></i>';
+                this.setAttribute('data-tooltip', 'Pause autoplay');
+                this.setAttribute('aria-label', 'Pause autoplay');
+                isNewsPlaying = true;
+            }
+        });
+
+        // Store state in swiper instance
+        newsSwiper.playPauseState = { isPlaying: true, button: newsPlayPause };
+    }
+}
+
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
