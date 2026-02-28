@@ -162,12 +162,12 @@ body {
     transition: var(--transition-slow);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 80px;
+    /*padding-top: 80px;*/
     transition: padding-top 0.3s ease;
 }
 
     body.has-announcement {
-        padding-top: 130px;
+        /*padding-top: 130px;*/
     }
 
 .container {
@@ -604,7 +604,7 @@ header {
     background: linear-gradient(135deg, var(--warning), #f97316);
 }
 
-.externalloing-icon {
+.security-icon {
     background: linear-gradient(135deg, var(--primary), #f9166d);
 }
 
@@ -1415,6 +1415,13 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hot-announcements-container .container {
+        gap: 0.25rem;
+    }
+
+    body.has-site-announcement.has-hot-announcements {
+        padding-top: calc(80px + 40px + 80px);
+    }
     .news-swiper .swiper-wrapper {
         align-items: flex-start;
     }
@@ -1426,7 +1433,7 @@ footer {
     .nav-links {
         display: none;
         position: absolute;
-        top: calc(100% + 80px);
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: var(--bg-card);
@@ -1513,14 +1520,16 @@ footer {
         margin: 1rem;
     }
 
-    body.has-announcement {
-        padding-top: 0;
+    header {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        transition: box-shadow 0.3s ease, backdrop-filter 0.3s ease !important;
     }
 
-    header {
-        position: relative;
-        top: 0;
-        z-index: 1000;
+    body.has-announcement {
+        padding-top: 0;
     }
 
     .hero {
@@ -1532,12 +1541,8 @@ footer {
         position: relative;
         z-index: 999;
         background: var(--bg-primary);
-        border-bottom: 1px solid var(--border-color);
+        /*border-bottom: 1px solid var(--border-color);*/
         padding: 0.5rem 0;
-    }
-
-    .nav-links {
-        top: 100% !important;
     }
 
     .hero-content {
@@ -1558,34 +1563,41 @@ footer {
     }
 
     .announcement-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: var(--radius-md);
+        color: var(--text-tertiary);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: var(--transition-fast);
+        opacity: 0.7;
+        /* New absolute positioning */
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 0;
+        right: 0;
+        margin: 0.85rem 1.75rem; /* matches container padding */
     }
 
     .gallery-navigation,
     .news-navigation {
-        min-height: 100px !important;
-        justify-content: flex-start !important;
+        margin-top: 1.5rem !important;
+        padding: 0.75rem 0 !important;
     }
 
     .swiper-pagination.gallery-pagination,
     .swiper-pagination.news-pagination {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        min-height: 30px !important;
         margin-bottom: 1rem !important;
-        line-height: 1 !important;
     }
 
     .gallery-controls,
     .news-controls {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        min-height: 50px !important;
-        gap: 1.5rem !important;
+        gap: 1rem !important;
     }
 
     .gallery-prev, .gallery-next,
@@ -1660,7 +1672,7 @@ footer {
 
 @media (max-width: 480px) {
     .nav-links {
-        top: calc(100% + 110px);
+        /*top: calc(100% + 110px);*/
     }
 
     .hot-announcement {
@@ -1683,6 +1695,39 @@ footer {
     }
 }
 
+/* ===== MULTIPLE HOT ANNOUNCEMENTS CONTAINER ===== */
+.hot-announcements-container {
+    width: 100%;
+    background: transparent;
+    padding: 0.25rem 0;
+    border-top: 1px solid var(--border-light);
+}
+
+    .hot-announcements-container .container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+.hot-announcement-wrapper {
+    width: 100%;
+    animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.3s ease;
+}
+
+    .hot-announcement-wrapper.hidden {
+        display: none;
+    }
+
+/* Adjust header spacing when multiple announcements */
+body.has-site-announcement {
+    padding-top: calc(80px + 50px); /* Header height + site announcement */
+}
+
+    body.has-site-announcement.has-hot-announcements {
+        padding-top: calc(80px + 50px + 100px); /* Adjust based on number of announcements */
+    }
+
 /* ===== HOT ANNOUNCEMENT BAR ===== */
 .hot-announcement-wrapper {
     width: 100%;
@@ -1690,7 +1735,7 @@ footer {
     padding: 0.25rem 0 0.75rem 0;
     margin-top: 0;
     animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    border-top: 1px solid var(--border-light);
+    /*border-top: 1px solid var(--border-light);*/
 }
 
 .hot-announcement {
@@ -1703,7 +1748,7 @@ footer {
     border: 1px solid var(--border-color);
     border-left: 6px solid var(--primary);
     border-radius: var(--radius-lg);
-    padding: 0.85rem 1.75rem;
+    padding: 0.85rem 4rem 0.85rem 1.75rem; /* increased right padding */
     box-shadow: var(--shadow-md);
     backdrop-filter: blur(8px);
     transition: var(--transition);
@@ -1855,6 +1900,11 @@ footer {
     cursor: pointer;
     transition: var(--transition-fast);
     opacity: 0.7;
+    /* New absolute positioning */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.85rem 1.75rem; /* matches container padding */
 }
 
     .announcement-close:hover {
@@ -1889,6 +1939,18 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 }
 
@@ -1933,7 +1995,7 @@ footer {
     align-items: center !important;
     margin-bottom: 1.5rem !important;
     margin-top: 0 !important;
-/*    left: auto !important;*/
+    /*    left: auto !important;*/
     right: auto !important;
 }
 
@@ -1979,7 +2041,7 @@ footer {
     width: 3.2rem !important;
     height: 3.2rem !important;
     border-radius: var(--radius-full) !important;
-       /*background: linear-gradient(135deg, var(--primary), var(--accent)) !important;*/
+    /*background: linear-gradient(135deg, var(--primary), var(--accent)) !important;*/
     background-color: var(--primary) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     color: white !important;

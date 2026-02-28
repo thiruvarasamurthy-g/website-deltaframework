@@ -1,4 +1,4 @@
-/*
+﻿/*
     (c) thirufactory.com. All rights reserved.
     Author: Thiruvarasamurthy G, IT Architect and Core Developer
     https://www.thirufactory.com
@@ -38,10 +38,17 @@ function init() {
     // Initialize header scroll effect
     initBackToTop();
 
-    // Initialize Hot Announcement
-    initHotAnnouncement();
+    // Initialize multiple hot announcements (UPDATED)
+    initMultipleHotAnnouncements();
 
+    // Initialize header spacing
     initHeaderSpacing();
+
+    // Add reset button (optional)
+    //addResetAnnouncementButton();
+
+    window.addEventListener('load', updateHeaderSpacing);
+    window.addEventListener('resize', updateHeaderSpacing);
 }
 
 // Theme Management - UPDATED with DOM ready check
@@ -92,7 +99,7 @@ function updateThemeIcon(theme) {
     }
 }
 
-// Mobile Menu
+// Mobile Menu - UPDATED
 function initMobileMenu() {
     mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
@@ -102,13 +109,6 @@ function initMobileMenu() {
 
         // Prevent body scroll when menu is open
         document.body.style.overflow = isExpanded ? 'hidden' : '';
-
-        // FIX: Adjust mobile menu position based on announcement presence
-        const announcement = document.querySelector('.hot-announcement-wrapper');
-        if (announcement && window.innerWidth <= 768) {
-            const announcementHeight = announcement.offsetHeight;
-            navLinks.style.top = `calc(100% + ${announcementHeight + 10}px)`;
-        }
     });
 
     // Close menu when clicking on a link
@@ -297,7 +297,7 @@ function animateCounter(element) {
                 } else {
                     element.textContent = formatNumber(Math.floor(current));
                 }
-            }, 30);
+            }, 40);
         }
     }
 }
@@ -454,31 +454,57 @@ function showNotification(message, type = 'info') {
     document.body.appendChild(notification);
 }
 
-// Header Scroll Effect
+// Header Scroll Effect - FIXED for mobile with hide/show
 function initHeaderScroll() {
     let lastScroll = 0;
     const header = document.querySelector('header');
+    const warning = document.getElementById('siteWarning'); // Get the warning div
 
-    window.addEventListener('scroll', () => {
+    function getWarningHeight() {
+        return warning ? warning.offsetHeight : 0;
+    }
+
+    function handleScroll() {
         const currentScroll = window.pageYOffset;
+        const isMobile = window.innerWidth <= 768;
+        const warningHeight = getWarningHeight();
+
+        // Always use fixed positioning
+        header.style.position = 'fixed';
+        header.style.top = warningHeight + 'px'; // Set top to warning height
 
         if (currentScroll <= 50) {
+            // At the top - show header
+            header.style.transform = 'translateY(0)';
             header.style.boxShadow = 'var(--shadow-sm)';
-            header.style.backdropFilter = 'blur(20px)';
+            header.style.opacity = '1';
         } else {
             header.style.boxShadow = 'var(--shadow-lg)';
-            header.style.backdropFilter = 'blur(30px)';
 
-            // Hide header on scroll down, show on scroll up
+            // Hide on scroll down, show on scroll up
             if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down - hide header
                 header.style.transform = 'translateY(-100%)';
-            } else {
+                header.style.opacity = '0';
+            } else if (currentScroll < lastScroll) {
+                // Scrolling up - show header
                 header.style.transform = 'translateY(0)';
+                header.style.opacity = '1';
             }
         }
 
         lastScroll = currentScroll;
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', function () {
+        // Recalculate warning height on resize
+        header.style.top = getWarningHeight() + 'px';
+        lastScroll = window.pageYOffset;
+        handleScroll();
     });
+
+    handleScroll(); // initial call
 }
 
 // Back to Top
@@ -497,12 +523,16 @@ function initBackToTop() {
 
     // Smooth scroll to top when clicked
     backToTop.addEventListener("click", () => {
-        // Reset header to visible state immediately
-        header.style.transform = 'translateY(0)';
-        header.style.boxShadow = 'var(--shadow-sm)';
-        header.style.backdropFilter = 'blur(20px)';
-        header.style.opacity = '1';
-        header.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+        const isMobile = window.innerWidth <= 768;
+
+        // On desktop, reset header to visible state
+        if (!isMobile) {
+            header.style.transform = 'translateY(0)';
+            header.style.opacity = '1';
+            header.style.boxShadow = 'var(--shadow-sm)';
+            header.style.backdropFilter = 'blur(20px)';
+            header.style.transition = 'transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease';
+        }
 
         // Scroll to top
         window.scrollTo({
@@ -512,62 +542,12 @@ function initBackToTop() {
 
         // Remove the forced transition after scroll completes
         setTimeout(() => {
-            header.style.transition = '';
+            if (!isMobile) {
+                header.style.transition = '';
+            }
         }, 500);
     });
 }
-
-function initHotAnnouncement() {
-    const closeBtn = document.querySelector('.announcement-close');
-    const announcementWrapper = document.querySelector('.hot-announcement-wrapper');
-
-    // Check if announcement was previously closed
-    const isAnnouncementClosed = localStorage.getItem('hotAnnouncementClosed');
-
-    if (isAnnouncementClosed && announcementWrapper) {
-        announcementWrapper.style.display = 'none';
-        document.body.classList.remove('has-announcement');
-    }
-
-    // Close button functionality
-    if (closeBtn && announcementWrapper) {
-        closeBtn.addEventListener('click', function () {
-            announcementWrapper.style.animation = 'slideUp 0.3s ease forwards';
-
-            // Store in localStorage that announcement was closed
-            localStorage.setItem('hotAnnouncementClosed', 'true');
-            document.body.classList.remove('has-announcement');
-
-            setTimeout(() => {
-                announcementWrapper.style.display = 'none';
-                // Re-adjust spacing after announcement is hidden
-                if (typeof initHeaderSpacing === 'function') {
-                    initHeaderSpacing();
-                }
-            }, 280);
-        });
-    }
-
-    // Add slideUp animation if not exists
-    if (!document.querySelector('#hot-announcement-styles')) {
-        const style = document.createElement('style');
-        style.id = 'hot-announcement-styles';
-        style.textContent = `
-            @keyframes slideUp {
-                from {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-                to {
-                    opacity: 0;
-                    transform: translateY(-20px);
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-}
-
 function initHeaderSpacing() {
     const header = document.querySelector('header');
     const announcement = document.querySelector('.hot-announcement-wrapper');
@@ -684,6 +664,114 @@ function initSliderControls() {
 
         // Store state in swiper instance
         newsSwiper.playPauseState = { isPlaying: true, button: newsPlayPause };
+    }
+}
+
+
+// Initialize Multiple Hot Announcements
+function initMultipleHotAnnouncements() {
+    const announcementWrappers = document.querySelectorAll('.hot-announcement-wrapper');
+
+    announcementWrappers.forEach(wrapper => {
+        const closeBtn = wrapper.querySelector('.announcement-close');
+        const announcementId = wrapper.dataset.announcementId;
+
+        // Check if this specific announcement was closed
+        const isClosed = localStorage.getItem(`hotAnnouncement_${announcementId}_closed`);
+
+        if (isClosed) {
+            wrapper.classList.add('hidden');
+        }
+
+        // Close button functionality for each announcement
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function () {
+                //wrapper.style.animation = 'slideUp 0.3s ease forwards';
+
+                // Store in localStorage that this specific announcement was closed
+                localStorage.setItem(`hotAnnouncement_${announcementId}_closed`, 'true');
+
+                setTimeout(() => {
+                    wrapper.classList.add('hidden');
+                    wrapper.style.animation = '';
+                    updateHeaderSpacing();
+                }, 280);
+            });
+        }
+    });
+
+    // Check if there are any visible announcements
+    updateHeaderSpacing();
+}
+
+// Update header spacing based on visible announcements
+function updateHeaderSpacing() {
+    const body = document.body;
+    const warning = document.getElementById('siteWarning');   // if exists
+    const header = document.querySelector('header');
+    const hotWrappers = document.querySelectorAll('.hot-announcement-wrapper');
+    const hotContainer = document.getElementById('hotAnnouncementsContainer');
+
+    // Hide the whole container if no hot announcements are visible
+    const visibleHotCount = Array.from(hotWrappers).filter(w => !w.classList.contains('hidden')).length;
+    if (hotContainer) {
+        hotContainer.style.display = visibleHotCount > 0 ? 'block' : 'none';
+    }
+
+    // Calculate total height of all fixed elements above the page content
+    let totalFixedHeight = 0;
+    if (warning && warning.style.display !== 'none') {
+        totalFixedHeight += warning.offsetHeight;
+    }
+    if (header) {
+        totalFixedHeight += header.offsetHeight;
+    }
+
+    // Apply padding – this works for all screen sizes
+    body.style.paddingTop = totalFixedHeight + 'px';
+
+    // Optional: keep body classes for any extra styling
+    body.classList.toggle('has-site-announcement', warning && warning.style.display !== 'none');
+    body.classList.toggle('has-hot-announcements', visibleHotCount > 0);
+}
+
+// Reset all announcements (admin function - can be called from console)
+function resetAllAnnouncements() {
+    // Clear all announcement-related localStorage items
+    Object.keys(localStorage).forEach(key => {
+        if (key.includes('Announcement') || key.includes('hotAnnouncement_')) {
+            localStorage.removeItem(key);
+        }
+    });
+
+    // Show all announcements
+    const siteAnnouncement = document.getElementById('siteAnnouncementBar');
+    if (siteAnnouncement) {
+        siteAnnouncement.style.display = '';
+        siteAnnouncement.style.animation = '';
+    }
+
+    document.querySelectorAll('.hot-announcement-wrapper').forEach(wrapper => {
+        wrapper.classList.remove('hidden');
+        wrapper.style.animation = '';
+    });
+
+    updateHeaderSpacing();
+    location.reload(); // Reload to reset all states
+}
+
+// Add reset button to footer (optional)
+function addResetAnnouncementButton() {
+    const copyright = document.querySelector('.copyright');
+    if (copyright) {
+        const resetBtn = document.createElement('span');
+        resetBtn.id = 'reset-announcements';
+        resetBtn.className = 'copyright-link';
+        resetBtn.style.marginLeft = '15px';
+        resetBtn.style.cursor = 'pointer';
+        resetBtn.innerHTML = '🔔 Reset Announcements';
+        resetBtn.onclick = resetAllAnnouncements;
+        copyright.appendChild(resetBtn);
     }
 }
 

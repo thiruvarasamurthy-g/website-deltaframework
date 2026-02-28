@@ -90,6 +90,10 @@
 </head>
 
 <body>
+    <!-- Site Warning Banner-->
+    <!--<div id="siteWarning" style="position: fixed; top: 0; left: 0; right: 0; background: #580160; color: white; text-align: center; padding: 10px; z-index: 2000;">
+        ⚠️ Site Under Updating Context
+    </div>-->
     <!-- Fixed Header-->
     <header>
         <div class="container header-container">
@@ -120,33 +124,107 @@
             </div>
         </div>
 
-        <!-- HOT ANNOUNCEMENT - MOVED INSIDE HEADER (AFTER header-container) -->
-        <div class="hot-announcement-wrapper">
+        <!-- HOT ANNOUNCEMENT WRAPPER (Multiple panels) -->
+        <div class="hot-announcements-container" id="hotAnnouncementsContainer">
             <div class="container">
-                <div class="hot-announcement">
-                    <div class="announcement-content">
-                        <div class="hot-badge pulse">
-                            <span class="hot-icon">🔥</span>
-                            <span class="hot-text">NEW RELEASE</span>
+                <!-- Announcement 1 -->
+                <div class="hot-announcement-wrapper" data-announcement-id="release-1140">
+                    <div class="hot-announcement">
+                        <div class="announcement-content">
+                            <div class="hot-badge pulse">
+                                <span class="hot-icon">🔥</span>
+                                <span class="hot-text">NEW RELEASE</span>
+                            </div>
+                            <div class="announcement-message">
+                                <span class="message-highlight">DeltaFramework v11.6.0</span>
+                                <span class="message-text">with Custom Own AI Model support and Dashboard UI app with Material You design</span>
+                            </div>
                         </div>
-                        <div class="announcement-message">
-                            <span class="message-highlight">DeltaFramework v11.4.0</span>
-                            <span class="message-text">with External Logins (Google, Facebook, Twitter) with OAuth PKCE and Dashboard UI app</span>
+                        <div class="announcement-actions">
+                            <a href="#features" class="announcement-link">
+                                <span>Learn more</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <span class="announcement-badge">✨ New</span>
                         </div>
+                        <button class="announcement-close" aria-label="Close announcement">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
-                    <div class="announcement-actions">
-                        <a href="#features" class="announcement-link">
-                            <span>Learn more</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <span class="announcement-badge">✨ New</span>
+                </div>
+
+                <!-- Announcement 2 - Example with different content -->
+                <!--<div class="hot-announcement-wrapper" data-announcement-id="performance-update">
+                    <div class="hot-announcement">
+                        <div class="announcement-content">
+                            <div class="hot-badge pulse" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                <span class="hot-icon">⚡</span>
+                                <span class="hot-text">PERFORMANCE</span>
+                            </div>
+                            <div class="announcement-message">
+                                <span class="message-highlight">4M+ Requests/Minute</span>
+                                <span class="message-text">New load testing results show exceptional performance</span>
+                            </div>
+                        </div>
+                        <div class="announcement-actions">
+                            <a href="#performance" class="announcement-link">
+                                <span>View metrics</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <span class="announcement-badge">📊 Updated</span>
+                        </div>
+                        <button class="announcement-close" aria-label="Close announcement">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
-                    <button class="announcement-close" aria-label="Close announcement">
-                        <i class="fas fa-times"></i>
-                    </button>
+                </div>-->
+                <!-- Announcement 3 - Example with different content -->
+                <div class="hot-announcement-wrapper" data-announcement-id="ai-features">
+                    <div class="hot-announcement">
+                        <div class="announcement-content">
+                            <div class="hot-badge pulse" style="background: linear-gradient(135deg, #8b5cf6, #d946ef);">
+                                <span class="hot-icon">🤖</span>
+                                <span class="hot-text">UPCOMING</span>
+                            </div>
+                            <div class="announcement-message">
+                                <span class="message-highlight">QUIC (HTTP/3) Protocol Integration</span>
+                                <span class="message-text">Modern network protocol designed for faster, reliable and secure communication.</span>
+                            </div>
+                        </div>
+                        <!--<div class="announcement-actions">
+                            <a href="#ai" class="announcement-link">
+                                <span>Learn more</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <span class="announcement-badge">✨ New</span>
+                        </div>-->
+                        <button class="announcement-close" aria-label="Close announcement">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- 🔥 Pre‑hide closed announcements to prevent flicker -->
+        <script>
+            (function () {
+                try {
+                    // Get all announcement wrappers
+                    var wrappers = document.querySelectorAll('.hot-announcement-wrapper');
+                    for (var i = 0; i < wrappers.length; i++) {
+                        var wrapper = wrappers[i];
+                        var id = wrapper.getAttribute('data-announcement-id');
+                        if (id && localStorage.getItem('hotAnnouncement_' + id + '_closed') === 'true') {
+                            wrapper.style.display = 'none'; // hide immediately
+                        }
+                    }
+                } catch (e) {
+                    // localStorage might be unavailable – ignore
+                }
+            })();
+        </script>
+
     </header>
 
     <!-- Hero Section -->
@@ -170,6 +248,9 @@
                             <i class="fas fa-bolt"></i> 4M+ requests/minute
                         </div>
                         <div class="badge">
+                            <i class="fas fa-expand-arrows-alt"></i>Scalable
+                        </div>
+                        <div class="badge">
                             <i class="fas fa-brain"></i> AI-Powered
                         </div>
                         <div class="badge">
@@ -179,10 +260,7 @@
                             <i class="fas fa-code"></i>Vibe Coding
                         </div>
                         <div class="badge">
-                            <i class="fas fa-code"></i>Spec‑Driven Coding
-                        </div>
-                        <div class="badge">
-                            <i class="fas fa-expand-arrows-alt"></i>Scalable
+                            <i class="fas fa-code"></i>Spec‑Driven Development
                         </div>
                     </div>
 
@@ -482,7 +560,7 @@
                 <!-- Highlight 23 -->
                 <article class="highlight-card">
                     <div class="highlight-icon">
-                        <i class="fas fa-network-wired"></i>
+                        <i class="fas fa-m"></i>
                     </div>
                     <h3>MCP (Model Control Protocol)</h3>
                     <p>
@@ -753,92 +831,97 @@
                     </div>
                     <h3>Framework Library</h3>
                     <p>
-                        A core component offering substantial benefits with minimal development effort. Designed for
-                        efficiency and seamless usage.
+                        Framework Library is modern core component engineered to deliver maximum value with minimal effort.
+                        Built for next‑gen applications.
                     </p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Adheres to NuGet standards for easy integration</li>
-                        <li><i class="fas fa-check"></i> Minimal development effort required</li>
-                        <li><i class="fas fa-check"></i> Optimized for high performance</li>
+                        <li><i class="fas fa-check"></i> Streamlined for efficiency and effortless use</li>
+                        <li><i class="fas fa-check"></i> Provides a thin, secure, and lightweight footprint</li>
+                        <li><i class="fas fa-check"></i> NuGet‑ready for instant integration and easier maintainability</li>
                     </ul>
                 </article>
 
                 <!-- Feature 2 -->
+                <article class="feature-card">
+                    <div class="feature-icon library-icon">
+                        <i class="fas fa-arrows-to-circle"></i>
+                    </div>
+                    <h3>Dynamic Loader</h3>
+                    <p>
+                        Dynamic Loader is central engine of the framework, a powerhouse that orchestrates technical components with unmatched performance.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Efficient handling of core technical components</li>
+                        <li><i class="fas fa-check"></i> Streamlined management of types and plugins</li>
+                        <li><i class="fas fa-check"></i> Optimized for efficiency, speed and resilience</li>
+                    </ul>
+                </article>
+
+                <!-- Feature 3 -->
                 <article class="feature-card">
                     <div class="feature-icon template-icon">
                         <i class="fas fa-clone"></i>
                     </div>
                     <h3>Project Template</h3>
                     <p>
-                        Facilitates the creation of technical projects with a single click, supporting various
+                        Facilitates the creation of technical projects with predefined structure by a single click, supporting various
                         architecture styles.
                     </p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> One-click project creation</li>
+                        <li><i class="fas fa-check"></i> One-click project creation and get ready</li>
                         <li><i class="fas fa-check"></i> Supports N-Tier, Onion, Clean Architecture</li>
                         <li><i class="fas fa-check"></i> Vertical Slice, Microservice & Modular Monolith</li>
-                    </ul>
-                </article>
-
-                <!-- Feature 3 -->
-                <article class="feature-card">
-                    <div class="feature-icon ai-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI-Proprietary Models</h3>
-                    <p>
-                        Seamlessly integrate AI capabilities without requiring a single line of source code in your
-                        application.
-                    </p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> OpenAI ChatGPT, Azure OpenAI</li>
-                        <li><i class="fas fa-check"></i> GitHub Copilot, Copilot and Gemini</li>
-                        <li><i class="fas fa-check"></i> Many proprietary AI models</li>
                     </ul>
                 </article>
 
                 <!-- Feature 4 -->
                 <article class="feature-card">
                     <div class="feature-icon ai-icon">
-                        <i class="fas fa-code-branch"></i>
+                        <i class="fas fa-plug-circle-check"></i>
                     </div>
-                    <h3>AI-OpenSource Models</h3>
-                    <p>Support for various open-source AI models with on-premises hosting capabilities.</p>
+                    <h3>AI Connector</h3>
+                    <p>
+                        Seamlessly integrate multiple unlimited counts of AI capabilities without writing a single line
+                        of source code in application.
+                    </p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> DeepSeek-R1, Llama, Phi, Mistral, Gemma</li>
-                        <li><i class="fas fa-check"></i> Hosted in your own on-premises environments</li>
-                        <li><i class="fas fa-check"></i> No source code modifications required</li>
+                        <li><i class="fas fa-check"></i> Integrate multiple AI capabilities including AI Clients and RAG</li>
+                        <li><i class="fas fa-check"></i> Zero source code required — simply add configuration entries to application</li>
+                        <li><i class="fas fa-check"></i> Instant readiness with minimal effort</li>
                     </ul>
                 </article>
 
                 <!-- Feature 5 -->
                 <article class="feature-card">
-                    <div class="feature-icon rag-icon">
-                        <i class="fas fa-search"></i>
+                    <div class="feature-icon ai-icon">
+                        <i class="fas fa-object-ungroup"></i>
                     </div>
-                    <h3>AI-RAG Ingest</h3>
+                    <h3>AI Models</h3>
                     <p>
-                        Easily ingest and index your data for Retrieval-Augmented Generation to keep AI knowledge fresh
-                        and accurate.
+                        Supports diverse model types including Proprietary Models, Open‑Source Models, and Custom Models
                     </p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Combines AI's creativity with real-time data</li>
-                        <li><i class="fas fa-check"></i> Retrieves relevant facts from sources</li>
-                        <li><i class="fas fa-check"></i> Reduces errors and keeps knowledge fresh</li>
+                        <li><i class="fas fa-check"></i> Proprietary Models: OpenAI, Azure OpenAI, GitHub, Copilot, Gemini</li>
+                        <li><i class="fas fa-check"></i> OpenSource Models: DeepSeek-R1, Llama, Phi, Mistral, Gemma</li>
+                        <li><i class="fas fa-check"></i> Custom Models: Support own models Ex: CustomerReviewAnalyze.onnx </li>
                     </ul>
                 </article>
 
+
                 <!-- Feature 6 -->
                 <article class="feature-card">
-                    <div class="feature-icon rag-icon">
-                        <i class="fas fa-comment-alt"></i>
+                    <div class="feature-icon ai-icon">
+                        <i class="fas fa-bezier-curve"></i>
                     </div>
-                    <h3>AI-RAG Prompt</h3>
-                    <p>Combine AI's creativity with real-time data lookup for accurate, context-aware responses.</p>
+                    <h3>AI-RAG System</h3>
+                    <p>
+                        Easily ingest and index your data for Retrieval-Augmented Generation to keep AI knowledge accurate.
+                        Provides context-aware responses.
+                    </p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Generates responses based on retrieved facts</li>
-                        <li><i class="fas fa-check"></i> Context-aware answer generation</li>
-                        <li><i class="fas fa-check"></i> Improved accuracy and relevance</li>
+                        <li><i class="fas fa-check"></i> Combines AI's creativity with real-time and own data</li>
+                        <li><i class="fas fa-check"></i> Retrieves relevant facts from sources</li>
+                        <li><i class="fas fa-check"></i> Reduces errors and keeps knowledge fresh</li>
                     </ul>
                 </article>
 
@@ -847,36 +930,38 @@
                     <div class="feature-icon performance-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
-                    <h3>Performance Insight</h3>
-                    <p>The design goal of the DeltaFramework startup duration is below 1000 Milliseconds.</p>
+                    <h3>Performance</h3>
+                    <p>Engineered for exceptional performance, delivering speed, efficiency, and reliability across all core components.</p>
                     <ul class="feature-list">
                         <li><i class="fas fa-check"></i> Meticulously designed for high-performance</li>
-                        <li><i class="fas fa-check"></i> Array of built-in features</li>
-                        <li><i class="fas fa-check"></i> Consistently maintaining high efficiency</li>
+                        <li><i class="fas fa-check"></i> Optimized to handle demanding workloads with minimal overhead</li>
+                        <li><i class="fas fa-check"></i> DeltaFramework v11.0.0 Startup Duration: 193 Milliseconds</li>
                     </ul>
                 </article>
 
                 <!-- Feature 8 -->
                 <article class="feature-card">
-                    <div class="feature-icon performance-icon">
-                        <i class="fas fa-rocket"></i>
+                    <div class="feature-icon security-icon">
+                        <i class="fas fa-building-shield"></i>
                     </div>
-                    <h3>Performance Insight v11.0.0</h3>
-                    <p>DeltaFramework library v11.0.0 version offers significant performance enhancements.</p>
+                    <h3>Security</h3>
+                    <p>
+                        The framework is designed with a security‑first approach, ensuring protection at every layer and safeguard next‑gen applications.
+                    </p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Startup Duration: 193 Milliseconds</li>
-                        <li><i class="fas fa-check"></i> Numerous built-in features</li>
-                        <li><i class="fas fa-check"></i> Optimized efficiency</li>
+                        <li><i class="fas fa-check"></i> Supports Parallel AuthN & AuthZ with JWT, OAuth, API Key, and Basic</li>
+                        <li><i class="fas fa-check"></i> Zero‑trust principles and Custom extensibility</li>
+                        <li><i class="fas fa-check"></i> Secured by advanced cryptography and SSL/TLS protocols</li>
                     </ul>
                 </article>
 
                 <!-- Feature 9 -->
                 <article class="feature-card">
-                    <div class="feature-icon externalloing-icon">
+                    <div class="feature-icon security-icon">
                         <i class="fas fa-user-shield"></i>
                     </div>
-                    <h3>External Logins with OAuth PKCE</h3>
-                    <p>Supports for External Logins (Google, Facebook, Twitter) with OAuth PKCE.</p>
+                    <h3>External Logins</h3>
+                    <p>Supports for External Logins (Google, Facebook, Twitter) with OAuth PKCE along with standard and custom tokens.</p>
                     <ul class="feature-list">
                         <li><i class="fas fa-check"></i> Secure authentication with OAuth PKCE</li>
                         <li><i class="fas fa-check"></i> Integrated modern identity management seamlessly</li>
@@ -890,7 +975,7 @@
                         <i class="fa fa-desktop"></i>
                     </div>
                     <h3>Integrated Dashboard UI</h3>
-                    <p>DeltaFramework provids Dashboard UI application for monitoring and controlling various components.</p>
+                    <p>Framework provides Dashboard UI application with Material You design for monitoring and controlling various components.</p>
                     <ul class="feature-list">
                         <li><i class="fas fa-check"></i> Monitor and control BackgroundJobs</li>
                         <li><i class="fas fa-check"></i> Monitor and control REST API Calls</li>
@@ -931,18 +1016,21 @@
                 </div>
 
                 <div class="ai-card">
-                    <i class="fas fa-database"></i>
-                    <h3>RAG Ingest</h3>
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Custom Models</h3>
                     <p>
-                        Easily ingest and index your data for Retrieval-Augmented Generation to keep AI knowledge fresh
-                        and accurate.
+                        Harness the power of custom AI models to unlock insights unique to application.
+                        Compact, efficient, and secure Ex: CustomerReviewAnalyze.onnx
                     </p>
                 </div>
 
                 <div class="ai-card">
-                    <i class="fas fa-comments"></i>
-                    <h3>RAG Prompt</h3>
-                    <p>Combine AI's creativity with real-time data lookup for accurate, context-aware responses.</p>
+                    <i class="fas fa-bezier-curve"></i>
+                    <h3>RAG System</h3>
+                    <p>
+                        Easily ingest and index your data for Retrieval-Augmented Generation to keep AI knowledge fresh
+                        and context-aware responses.
+                    </p>
                 </div>
             </div>
         </div>
@@ -984,11 +1072,11 @@
 
                 <div class="load-test">
                     <h3>Load Test Results</h3>
-                    <p>Environment: 1 PC (App Server + DB Server + Load Testing Tool), CPU: 5.80 GHz, RAM: 32 GB</p>
+                    <p>Environment: 1 Local PC (App Server + DB Server + Load Testing Tool), CPU: 5.80 GHz, RAM: 32 GB</p>
 
                     <div class="test-results">
                         <div class="test-result">
-                            <div class="test-value">4.18M</div>
+                            <div class="test-value">4185435</div>
                             <div class="test-label">Total HTTP Requests</div>
                         </div>
 
@@ -1162,11 +1250,11 @@
                         <div class="swiper-slide gallery-slide">
                             <div class="gallery-item">
                                 <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Dashboard-BackgroundJob.png" alt="Load Testing"
+                                    <img src="images/DeltaFramework-Dashboard-BackgroundJob1.png" alt="Load Testing"
                                          loading="lazy">
                                 </div>
                                 <div class="gallery-content">
-                                    <h3>BackgroundJob Dashboard</h3>
+                                    <h3>Dashboard - BackgroundJob 1</h3>
                                     <p>
                                         Dashboard UI application for monitoring and controlling DeltaFramework’s real‑time background jobs.
                                     </p>
@@ -1174,6 +1262,21 @@
                             </div>
                         </div>
                         <!-- Slide 11 -->
+                        <div class="swiper-slide gallery-slide">
+                            <div class="gallery-item">
+                                <div class="gallery-image">
+                                    <img src="images/DeltaFramework-Dashboard-BackgroundJob2.png" alt="Load Testing"
+                                         loading="lazy">
+                                </div>
+                                <div class="gallery-content">
+                                    <h3>Dashboard - BackgroundJob 2</h3>
+                                    <p>
+                                        Dashboard UI application Mobile view for monitoring and controlling DeltaFramework’s real‑time background jobs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 12 -->
                         <div class="swiper-slide gallery-slide">
                             <div class="gallery-item">
                                 <div class="gallery-image">
@@ -1188,7 +1291,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide 12 -->
+                        <!-- Slide 13 -->
                         <div class="swiper-slide gallery-slide">
                             <div class="gallery-item">
                                 <div class="gallery-image">
@@ -1203,7 +1306,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide 13 -->
+                        <!-- Slide 14 -->
                         <div class="swiper-slide gallery-slide">
                             <div class="gallery-item">
                                 <div class="gallery-image">
@@ -1218,7 +1321,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide 14 -->
+                        <!-- Slide 15 -->
                         <div class="swiper-slide gallery-slide">
                             <div class="gallery-item">
                                 <div class="gallery-image">
@@ -1226,7 +1329,7 @@
                                          loading="lazy">
                                 </div>
                                 <div class="gallery-content">
-                                    <h3>ExternalLogin Dashboard 3</h3>
+                                    <h3>ExternalLogin Dashboard 4</h3>
                                     <p>
                                         Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
                                     </p>
@@ -1329,16 +1432,37 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <article class="news-card">
-                                <div class="news-date">Feb 14, 2026</div>
-                                <h3>DeltaFramework v11.4.0 Released</h3>
+                                <div class="news-date">Feb 28, 2026</div>
+                                <h3>DeltaFramework v11.6.0 Released</h3>
                                 <p>
+                                    Added Custom AI Model support.<br>
                                     Added Supports with External Logins (Google, Facebook, Twitter)  with OAuth PKCE.<br>
-                                    Added Dashboard UI application.
+                                    Added Material You design in Dashboard UI application.
                                 </p>
                             </article>
                         </div>
 
                         <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Feb 28, 2025</div>
+                                <h3>Upcoming</h3>
+                                <p>
+                                    QUIC (HTTP/3) Protocol Integration - QUIC is a modern, network protocol made for faster, reliable, and secure connectivity.
+                                </p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Feb 28, 2025</div>
+                                <h3>Development Info</h3>
+                                <p>
+                                    845+ Source code commits in DeltFramework development sofar 😊
+                                </p>
+                            </article>
+                        </div>
+
+                        <!--<div class="swiper-slide">
                             <article class="news-card">
                                 <div class="news-date">Dec 15, 2025</div>
                                 <h3>MCP Integration Complete</h3>
@@ -1391,7 +1515,7 @@
                                     to quantum algorithms.
                                 </p>
                             </article>
-                        </div>
+                        </div>-->
                     </div>
 
                     <!-- News Navigation - Two-line layout -->
@@ -1516,19 +1640,19 @@
                     <div class="footer-info">
                         <div class="version-item">
                             <strong>Framework Version:</strong>
-                            <span>11.4.0</span>
+                            <span>11.6.0</span>
                         </div>
                         <div class="version-item">
                             <strong>Release Date:</strong>
-                            <span>February 14, 2026</span>
+                            <span>February 28, 2026</span>
                         </div>
                         <div class="version-item">
                             <strong>Website Version:</strong>
-                            <span>9.0.0</span>
+                            <span>10.0.0</span>
                         </div>
                         <div class="version-item">
                             <strong>Last Updated:</strong>
-                            <span>February 14, 2026</span>
+                            <span>February 28, 2026</span>
                         </div>
                     </div>
                 </div>
