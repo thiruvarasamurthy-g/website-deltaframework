@@ -136,8 +136,8 @@
                                 <span class="hot-text">NEW RELEASE</span>
                             </div>
                             <div class="announcement-message">
-                                <span class="message-highlight">DeltaFramework v11.7.0</span>
-                                <span class="message-text">with Streaming HTTP (SSE) for BackgroundJobs</span>
+                                <span class="message-highlight">DeltaFramework v11.9.0</span>
+                                <span class="message-text">with Streaming HTTP (SSE) for BackgroundJobs and EF 10 Support</span>
                             </div>
                         </div>
                         <div class="announcement-actions">
@@ -987,9 +987,9 @@
                         <i class="fa fa-desktop"></i>
                     </div>
                     <h3>Integrated Dashboard UI</h3>
-                    <p>Framework provides Dashboard UI application with Material You design for monitoring and controlling various components.</p>
+                    <p>Framework provides Dashboard UI App built with WebAssembly and Material You design for monitoring and controlling various components.</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Monitor and control BackgroundJobs</li>
+                        <li><i class="fas fa-check"></i> Monitor and control BackgroundJobs lively</li>
                         <li><i class="fas fa-check"></i> Monitor and control REST API Calls</li>
                         <li><i class="fas fa-check"></i> Monitor and control ReverseProxy and DistributedCache Servers</li>
                     </ul>
@@ -1120,257 +1120,283 @@
                 <p class="section-subtitle">Visual showcase of DeltaFramework components and features</p>
             </div>
 
-            <div class="gallery-slider">
-                <div class="swiper gallery-swiper">
-                    <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Libraries.png" alt="DeltaFramework Libraries"
-                                         loading="lazy">
+            <!-- Photo Slider Block -->
+            <div class="slider-block">
+                <h3 class="slider-title">Photos</h3>
+                <div class="gallery-slider">
+                    <div class="swiper gallery-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-Libraries.png" alt="DeltaFramework Libraries"
+                                             loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>Framework Libraries</h3>
+                                        <p>
+                                            Comprehensive library collection with NuGet integration for seamless development
+                                            workflow.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="gallery-content">
-                                    <h3>Framework Libraries</h3>
-                                    <p>
-                                        Comprehensive library collection with NuGet integration for seamless development
-                                        workflow.
-                                    </p>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-ProjectTemplate.png" alt="Project Templates"
+                                             loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>Project Templates</h3>
+                                        <p>
+                                            Ready-to-use templates for various architecture patterns including Clean
+                                            Architecture and Microservices.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-AI-PM.png" alt="AI Integration" loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>AI Integration</h3>
+                                        <p>
+                                            Seamless integration with proprietary and open-source AI models for intelligent
+                                            applications.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-AI-OM.png" alt="Open Source AI" loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>Open Source AI Models</h3>
+                                        <p>
+                                            Support for leading open-source AI models with on-premises deployment
+                                            capabilities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-AI-RAG-Ingest.png" alt="RAG Ingest" loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>RAG Ingest Pipeline</h3>
+                                        <p>Efficient data ingestion pipeline for Retrieval-Augmented Generation systems.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 6 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-AI-RAG-Prompt.png" alt="RAG Prompt" loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>RAG Prompt System</h3>
+                                        <p>Advanced prompt engineering with context-aware response generation.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 7 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-Libraries-PerformanceInsight.png"
+                                             alt="Performance Metrics" loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>Performance Metrics 1</h3>
+                                        <p>Real-time performance monitoring and optimization insights for applications.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 8 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-Libraries-PerformanceInsight-latest.png"
+                                             alt="Performance Metrics" loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>Performance Metrics 2</h3>
+                                        <p>Real-time performance monitoring and optimization insights for applications.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 9 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-App-PerformanceInsight1.png" alt="Load Testing"
+                                             loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>Load Testing Results</h3>
+                                        <p>
+                                            Comprehensive load testing with 4M+ requests per minute capacity demonstration.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 11 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-Dashboard-ExternalLogin1.png" alt="Load Testing"
+                                             loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>ExternalLogin Dashboard 1</h3>
+                                        <p>
+                                            Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 12 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-Dashboard-ExternalLogin2.png" alt="Load Testing"
+                                             loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>ExternalLogin Dashboard 2</h3>
+                                        <p>
+                                            Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 13 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-Dashboard-ExternalLogin3.png" alt="Load Testing"
+                                             loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>ExternalLogin Dashboard 3</h3>
+                                        <p>
+                                            Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 14 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <img src="images/DeltaFramework-Dashboard-ExternalLogin4.png" alt="Load Testing"
+                                             loading="lazy">
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>ExternalLogin Dashboard 4</h3>
+                                        <p>
+                                            Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-ProjectTemplate.png" alt="Project Templates"
-                                         loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>Project Templates</h3>
-                                    <p>
-                                        Ready-to-use templates for various architecture patterns including Clean
-                                        Architecture and Microservices.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Gallery Navigation - Two-line layout -->
+                        <div class="gallery-navigation">
+                            <!-- First line: Pagination dots -->
+                            <div class="swiper-pagination gallery-pagination"></div>
 
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-AI-PM.png" alt="AI Integration" loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>AI Integration</h3>
-                                    <p>
-                                        Seamless integration with proprietary and open-source AI models for intelligent
-                                        applications.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                            <!-- Second line: Control buttons -->
+                            <div class="gallery-controls">
+                                <button class="gallery-prev" aria-label="Previous slide">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
 
-                        <!-- Slide 4 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-AI-OM.png" alt="Open Source AI" loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>Open Source AI Models</h3>
-                                    <p>
-                                        Support for leading open-source AI models with on-premises deployment
-                                        capabilities.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                                <button class="gallery-play-pause" id="galleryPlayPause" data-tooltip="Pause autoplay" aria-label="Pause autoplay">
+                                    <i class="fas fa-pause"></i>
+                                </button>
 
-                        <!-- Slide 5 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-AI-RAG-Ingest.png" alt="RAG Ingest" loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>RAG Ingest Pipeline</h3>
-                                    <p>Efficient data ingestion pipeline for Retrieval-Augmented Generation systems.</p>
-                                </div>
+                                <button class="gallery-next" aria-label="Next slide">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
                             </div>
-                        </div>
-
-                        <!-- Slide 6 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-AI-RAG-Prompt.png" alt="RAG Prompt" loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>RAG Prompt System</h3>
-                                    <p>Advanced prompt engineering with context-aware response generation.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 7 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Libraries-PerformanceInsight.png"
-                                         alt="Performance Metrics" loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>Performance Metrics 1</h3>
-                                    <p>Real-time performance monitoring and optimization insights for applications.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 8 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Libraries-PerformanceInsight-latest.png"
-                                         alt="Performance Metrics" loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>Performance Metrics 2</h3>
-                                    <p>Real-time performance monitoring and optimization insights for applications.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 9 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-App-PerformanceInsight1.png" alt="Load Testing"
-                                         loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>Load Testing Results</h3>
-                                    <p>
-                                        Comprehensive load testing with 4M+ requests per minute capacity demonstration.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 10 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Dashboard-BackgroundJob1.png" alt="Load Testing"
-                                         loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>Dashboard - BackgroundJob 1</h3>
-                                    <p>
-                                        Dashboard UI application for monitoring and controlling DeltaFramework’s real‑time background jobs.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 11 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Dashboard-BackgroundJob2.png" alt="Load Testing"
-                                         loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>Dashboard - BackgroundJob 2</h3>
-                                    <p>
-                                        Dashboard UI application Mobile view for monitoring and controlling DeltaFramework’s real‑time background jobs.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 12 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Dashboard-ExternalLogin1.png" alt="Load Testing"
-                                         loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>ExternalLogin Dashboard 1</h3>
-                                    <p>
-                                        Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 13 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Dashboard-ExternalLogin2.png" alt="Load Testing"
-                                         loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>ExternalLogin Dashboard 2</h3>
-                                    <p>
-                                        Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 14 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Dashboard-ExternalLogin3.png" alt="Load Testing"
-                                         loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>ExternalLogin Dashboard 3</h3>
-                                    <p>
-                                        Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 15 -->
-                        <div class="swiper-slide gallery-slide">
-                            <div class="gallery-item">
-                                <div class="gallery-image">
-                                    <img src="images/DeltaFramework-Dashboard-ExternalLogin4.png" alt="Load Testing"
-                                         loading="lazy">
-                                </div>
-                                <div class="gallery-content">
-                                    <h3>ExternalLogin Dashboard 4</h3>
-                                    <p>
-                                        Supports external logins (Google, Facebook, Twitter) with secure OAuth PKCE integration.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Navigation - Two-line layout -->
-                    <div class="gallery-navigation">
-                        <!-- First line: Pagination dots -->
-                        <div class="swiper-pagination gallery-pagination"></div>
-
-                        <!-- Second line: Control buttons -->
-                        <div class="gallery-controls">
-                            <button class="gallery-prev" aria-label="Previous slide">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-
-                            <button class="gallery-play-pause" id="galleryPlayPause" data-tooltip="Pause autoplay" aria-label="Pause autoplay">
-                                <i class="fas fa-pause"></i>
-                            </button>
-
-                            <button class="gallery-next" aria-label="Next slide">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Video Slider Block -->
+            <div class="slider-block">
+                <h3 class="slider-title">Videos</h3>
+                <div class="gallery-slider">
+                    <div class="swiper gallery-swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide gallery-slide">
+                                <div class="gallery-item">
+                                    <div class="gallery-image">
+                                        <!--<video autoplay muted loop playsinline controls preload="metadata" poster="images/DeltaFramework-ProjectTemplate.png">-->
+                                        <video autoplay muted loop playsinline controls preload="metadata">
+                                            <source src="videos\DeltaFramework-Dashboard-BackgroundJob.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <div class="gallery-content">
+                                        <h3>Video: Dashboard - BackgroundJob</h3>
+                                        <p>Dashboard UI application for monitoring and controlling DeltaFramework’s real‑time background jobs.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Gallery Navigation - Two-line layout -->
+                        <div class="gallery-navigation">
+                            <!-- First line: Pagination dots -->
+                            <div class="swiper-pagination gallery-pagination"></div>
+
+                            <!-- Second line: Control buttons -->
+                            <div class="gallery-controls">
+                                <button class="gallery-prev" aria-label="Previous slide">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+
+                                <button class="gallery-play-pause" id="galleryPlayPause" data-tooltip="Pause autoplay" aria-label="Pause autoplay">
+                                    <i class="fas fa-pause"></i>
+                                </button>
+
+                                <button class="gallery-next" aria-label="Next slide">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1444,10 +1470,20 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <article class="news-card">
-                                <div class="news-date">Mar 07, 2026</div>
-                                <h3>DeltaFramework v11.7.0 Released</h3>
+                                <div class="news-date">Mar 14, 2026</div>
+                                <h3>DeltaFramework v11.9.0 Released</h3>
                                 <p>
-                                    Added Streaming HTTP (SSE) which enable Live update with apps.<br>
+                                    Added Streaming HTTP (SSE) which enable Live update with apps and EF 10 Support.<br>
+                                </p>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Mar 15, 2026</div>
+                                <h3>Video Gallery</h3>
+                                <p>
+                                    Added Video Gallery.<br>
                                 </p>
                             </article>
                         </div>
@@ -1485,59 +1521,59 @@
                         </div>
 
                         <!--<div class="swiper-slide">
-                            <article class="news-card">
-                                <div class="news-date">Dec 15, 2025</div>
-                                <h3>MCP Integration Complete</h3>
-                                <p>
-                                    Model Control Protocol integration and MultiAuthentication support added for enhanced
-                                    AI model communication.
-                                </p>
-                            </article>
-                        </div>
+        <article class="news-card">
+            <div class="news-date">Dec 15, 2025</div>
+            <h3>MCP Integration Complete</h3>
+            <p>
+                Model Control Protocol integration and MultiAuthentication support added for enhanced
+                AI model communication.
+            </p>
+        </article>
+    </div>
 
-                        <div class="swiper-slide">
-                            <article class="news-card">
-                                <div class="news-date">Dec 10, 2025</div>
-                                <h3>Built-in Components Added</h3>
-                                <p>
-                                    New built-in Mapper, Mediator, Validator components for simplified development
-                                    workflows and better code organization.
-                                </p>
-                            </article>
-                        </div>
+    <div class="swiper-slide">
+        <article class="news-card">
+            <div class="news-date">Dec 10, 2025</div>
+            <h3>Built-in Components Added</h3>
+            <p>
+                New built-in Mapper, Mediator, Validator components for simplified development
+                workflows and better code organization.
+            </p>
+        </article>
+    </div>
 
-                        <div class="swiper-slide">
-                            <article class="news-card">
-                                <div class="news-date">Dec 5, 2025</div>
-                                <h3>BackgroundService & SSE Support</h3>
-                                <p>
-                                    New background services and Server-Sent Events support added for real-time
-                                    application features.
-                                </p>
-                            </article>
-                        </div>
+    <div class="swiper-slide">
+        <article class="news-card">
+            <div class="news-date">Dec 5, 2025</div>
+            <h3>BackgroundService & SSE Support</h3>
+            <p>
+                New background services and Server-Sent Events support added for real-time
+                application features.
+            </p>
+        </article>
+    </div>
 
-                        <div class="swiper-slide">
-                            <article class="news-card">
-                                <div class="news-date">Nov 28, 2025</div>
-                                <h3>ContextAccessor Enhanced</h3>
-                                <p>
-                                    Enhanced context access and configuration management for better application state
-                                    handling.
-                                </p>
-                            </article>
-                        </div>
+    <div class="swiper-slide">
+        <article class="news-card">
+            <div class="news-date">Nov 28, 2025</div>
+            <h3>ContextAccessor Enhanced</h3>
+            <p>
+                Enhanced context access and configuration management for better application state
+                handling.
+            </p>
+        </article>
+    </div>
 
-                        <div class="swiper-slide">
-                            <article class="news-card">
-                                <div class="news-date">Nov 20, 2025</div>
-                                <h3>Quantum Computing Plugin</h3>
-                                <p>
-                                    New plugin for Quantum Computing operations added, expanding framework capabilities
-                                    to quantum algorithms.
-                                </p>
-                            </article>
-                        </div>-->
+    <div class="swiper-slide">
+        <article class="news-card">
+            <div class="news-date">Nov 20, 2025</div>
+            <h3>Quantum Computing Plugin</h3>
+            <p>
+                New plugin for Quantum Computing operations added, expanding framework capabilities
+                to quantum algorithms.
+            </p>
+        </article>
+    </div>-->
                     </div>
 
                     <!-- News Navigation - Two-line layout -->
@@ -1662,19 +1698,19 @@
                     <div class="footer-info">
                         <div class="version-item">
                             <strong>Framework Version:</strong>
-                            <span>11.7.0</span>
+                            <span>11.9.0</span>
                         </div>
                         <div class="version-item">
                             <strong>Release Date:</strong>
-                            <span>March 07, 2026</span>
+                            <span>March14, 2026</span>
                         </div>
                         <div class="version-item">
                             <strong>Website Version:</strong>
-                            <span>10.1.0</span>
+                            <span>11.0.0</span>
                         </div>
                         <div class="version-item">
                             <strong>Last Updated:</strong>
-                            <span>March 07, 2026</span>
+                            <span>March 15, 2026</span>
                         </div>
                     </div>
                 </div>
