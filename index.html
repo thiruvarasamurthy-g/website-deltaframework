@@ -52,7 +52,7 @@
     <meta name="description"
           content="A cutting-edge, modern and robust software creation bundle. It offers advanced Architecture Styles, Frameworks, Libraries and Project Templates will accelerate the projects.">
     <meta name="keywords"
-          content="DeltaFramework, Delta Framework, Delta, Framework, Library, NuGet, .NET, .NET 8, AI Integration, RAG, Microservices, Clean Architecture, High Performance, Thiruvarasamurthy G">
+          content="DeltaFramework, Delta Framework, Delta, Framework, Library, NuGet, .NET, .NET 10, AI Integration, RAG, Microservices, Clean Architecture, High Performance, Thiruvarasamurthy G">
     <meta name="author" content="Thiruvarasamurthy G">
 
     <script>
@@ -128,7 +128,7 @@
         <div class="hot-announcements-container" id="hotAnnouncementsContainer">
             <div class="container">
                 <!-- Announcement 1 -->
-                <div class="hot-announcement-wrapper" data-announcement-id="release-1140">
+                <div class="hot-announcement-wrapper" data-announcement-id="release-1140" data-version="March 28, 2026">
                     <div class="hot-announcement">
                         <div class="announcement-content">
                             <div class="hot-badge pulse">
@@ -136,8 +136,8 @@
                                 <span class="hot-text">NEW RELEASE</span>
                             </div>
                             <div class="announcement-message">
-                                <span class="message-highlight">DeltaFramework v11.9.0</span>
-                                <span class="message-text">with Streaming HTTP (SSE) for BackgroundJobs and EF 10 Support</span>
+                                <span class="message-highlight">DeltaFramework v11.10.0</span>
+                                <span class="message-text">with Telemetry - collecting, measuring, transmitting real-time data</span>
                             </div>
                         </div>
                         <div class="announcement-actions">
@@ -154,7 +154,7 @@
                 </div>
 
                 <!-- Announcement 2 - Example with different content -->
-                <!--<div class="hot-announcement-wrapper" data-announcement-id="performance-update">
+                <!--<div class="hot-announcement-wrapper" data-announcement-id="performance-update" data-version="March 28, 2026">
                     <div class="hot-announcement">
                         <div class="announcement-content">
                             <div class="hot-badge pulse" style="background: linear-gradient(135deg, #10b981, #059669);">
@@ -175,11 +175,36 @@
                         </div>
                         <button class="announcement-close" aria-label="Close announcement">
                             <i class="fas fa-times"></i>
+                        </button>closeBtn.addEventListener('click', function ()
+                    </div>
+                </div>-->
+                <!-- Announcement 3 - Example with different content -->
+                <!--<div class="hot-announcement-wrapper" data-announcement-id="ai-features" data-version="March 28, 2026">
+                <div class="hot-announcement">
+                    <div class="announcement-content">
+                        <div class="hot-badge pulse" style="background: linear-gradient(135deg, #8b5cf6, #d946ef);">
+                            <span class="hot-icon">🤖</span>
+                            <span class="hot-text">UPCOMING</span>
+                        </div>
+                        <div class="announcement-message">
+                            <span class="message-highlight">QUIC (HTTP/3) Protocol Integration</span>
+                            <span class="message-text">Modern network protocol designed for faster, reliable and secure communication.</span>
+                        </div>
+                    </div>-->
+                <!--<div class="announcement-actions">
+                    <a href="#ai" class="announcement-link">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <span class="announcement-badge">✨ New</span>
+                </div>-->
+                <!--<button class="announcement-close" aria-label="Close announcement">
+                            <i class="fas fa-times"></i>
                         </button>
                     </div>
                 </div>-->
                 <!-- Announcement 3 - Example with different content -->
-                <div class="hot-announcement-wrapper" data-announcement-id="ai-features">
+                <div class="hot-announcement-wrapper" data-announcement-id="ai-features" data-version="March 28, 2026">
                     <div class="hot-announcement">
                         <div class="announcement-content">
                             <div class="hot-badge pulse" style="background: linear-gradient(135deg, #8b5cf6, #d946ef);">
@@ -187,22 +212,23 @@
                                 <span class="hot-text">UPCOMING</span>
                             </div>
                             <div class="announcement-message">
-                                <span class="message-highlight">QUIC (HTTP/3) Protocol Integration</span>
-                                <span class="message-text">Modern network protocol designed for faster, reliable and secure communication.</span>
+                                <span class="message-highlight">GDPR Compliance</span>
+                                <span class="message-text">Incorporate Privacy by Design and by Default (Article 25).</span>
                             </div>
                         </div>
                         <!--<div class="announcement-actions">
-                            <a href="#ai" class="announcement-link">
-                                <span>Learn more</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <span class="announcement-badge">✨ New</span>
-                        </div>-->
+                        <a href="#ai" class="announcement-link">
+                            <span>Learn more</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <span class="announcement-badge">✨ New</span>
+                        v>-->
                         <button class="announcement-close" aria-label="Close announcement">
                             <i class="fas fa-times"></i>
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -210,18 +236,25 @@
         <script>
             (function () {
                 try {
-                    // Get all announcement wrappers
                     var wrappers = document.querySelectorAll('.hot-announcement-wrapper');
                     for (var i = 0; i < wrappers.length; i++) {
                         var wrapper = wrappers[i];
                         var id = wrapper.getAttribute('data-announcement-id');
-                        if (id && localStorage.getItem('hotAnnouncement_' + id + '_closed') === 'true') {
-                            wrapper.style.display = 'none'; // hide immediately
+                        var currentVersion = wrapper.getAttribute('data-version');
+                        var closedVersion = localStorage.getItem('hotAnnouncement_' + id + '_closed');
+
+                        if (closedVersion) {
+                            if (closedVersion === currentVersion) {
+                                wrapper.style.display = 'none';  // Same version – keep hidden
+                            } else {
+                                // Version changed – remove old storage and show
+                                localStorage.removeItem('hotAnnouncement_' + id + '_closed');
+                                wrapper.style.display = '';  // Show
+                            }
                         }
+                        // If no closedVersion stored, announcement shows by default
                     }
-                } catch (e) {
-                    // localStorage might be unavailable – ignore
-                }
+                } catch (e) { }
             })();
         </script>
 
@@ -255,6 +288,9 @@
                         </div>
                         <div class="badge">
                             <i class="fas fa-layer-group"></i> Multiple Architectures
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-shield-halved"></i>Privacy-First
                         </div>
                         <div class="badge">
                             <i class="fas fa-code"></i>Vibe Coding
@@ -704,18 +740,6 @@
                 <!-- Highlight 35 -->
                 <article class="highlight-card">
                     <div class="highlight-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h3>Logger</h3>
-                    <p>
-                        Logger provides structured logging, allowing developers to capture detailed logs. It supports
-                        various log sinks, making it easy to route logs to files, databases, or external systems.
-                    </p>
-                </article>
-
-                <!-- Highlight 36 -->
-                <article class="highlight-card">
-                    <div class="highlight-icon">
                         <i class="fas fa-exclamation-triangle"></i>
                     </div>
                     <h3>Exception Handler</h3>
@@ -725,7 +749,31 @@
                     </p>
                 </article>
 
+                <!-- Highlight 36 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Logger</h3>
+                    <p>
+                        Logger provides structured logging, allowing developers to capture detailed logs. It supports
+                        various log sinks, making it easy to route logs to files, databases, or external systems.
+                    </p>
+                </article>
+
                 <!-- Highlight 37 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-chart-column"></i>
+                    </div>
+                    <h3>Telemetry</h3>
+                    <p>
+                        Telemetry is the automated process of collecting, measuring,
+                        and transmitting real-time performance data and usage statistics from software to a remote system for monitoring.
+                    </p>
+                </article>
+
+                <!-- Highlight 38 -->
                 <article class="highlight-card">
                     <div class="highlight-icon">
                         <i class="fas fa-heart"></i>
@@ -1470,10 +1518,10 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <article class="news-card">
-                                <div class="news-date">Mar 14, 2026</div>
-                                <h3>DeltaFramework v11.9.0 Released</h3>
+                                <div class="news-date">Mar 28, 2026</div>
+                                <h3>DeltaFramework v11.10.0 Released</h3>
                                 <p>
-                                    Added Streaming HTTP (SSE) which enable Live update with apps and EF 10 Support.<br>
+                                    Added Telemetry - collecting, measuring, transmitting real-time data.<br>
                                 </p>
                             </article>
                         </div>
@@ -1493,19 +1541,29 @@
                                 <div class="news-date">Feb 28, 2026</div>
                                 <h3>Recent Features</h3>
                                 <p>
-                                    Added Custom AI Model support.<br>
-                                    Added Supports with External Logins (Google, Facebook, Twitter)  with OAuth PKCE.<br>
-                                    Added Material You design in Dashboard UI application.
+                                    Custom AI Model, External Logins with OAuth PKCE,
+                                    Dashboard UI App, EF 10, SSE<br>
+
                                 </p>
                             </article>
                         </div>
+
+                        <!--<div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Mar 07, 2025</div>
+                                <h3>Upcoming</h3>
+                                <p>
+                                    QUIC (HTTP/3) Protocol Integration - QUIC is a modern, network protocol made for faster, reliable, and secure connectivity.
+                                </p>
+                            </article>
+                        </div>-->
 
                         <div class="swiper-slide">
                             <article class="news-card">
                                 <div class="news-date">Mar 07, 2025</div>
                                 <h3>Upcoming</h3>
                                 <p>
-                                    QUIC (HTTP/3) Protocol Integration - QUIC is a modern, network protocol made for faster, reliable, and secure connectivity.
+                                    GDPR Compliance incorporates Privacy by Design and by Default (Article 25).
                                 </p>
                             </article>
                         </div>
@@ -1521,59 +1579,59 @@
                         </div>
 
                         <!--<div class="swiper-slide">
-        <article class="news-card">
-            <div class="news-date">Dec 15, 2025</div>
-            <h3>MCP Integration Complete</h3>
-            <p>
-                Model Control Protocol integration and MultiAuthentication support added for enhanced
-                AI model communication.
-            </p>
-        </article>
-    </div>
+                            <article class="news-card">
+                                <div class="news-date">Dec 15, 2025</div>
+                                <h3>MCP Integration Complete</h3>
+                                <p>
+                                    Model Control Protocol integration and MultiAuthentication support added for enhanced
+                                    AI model communication.
+                                </p>
+                            </article>
+                        </div>
 
-    <div class="swiper-slide">
-        <article class="news-card">
-            <div class="news-date">Dec 10, 2025</div>
-            <h3>Built-in Components Added</h3>
-            <p>
-                New built-in Mapper, Mediator, Validator components for simplified development
-                workflows and better code organization.
-            </p>
-        </article>
-    </div>
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Dec 10, 2025</div>
+                                <h3>Built-in Components Added</h3>
+                                <p>
+                                    New built-in Mapper, Mediator, Validator components for simplified development
+                                    workflows and better code organization.
+                                </p>
+                            </article>
+                        </div>
 
-    <div class="swiper-slide">
-        <article class="news-card">
-            <div class="news-date">Dec 5, 2025</div>
-            <h3>BackgroundService & SSE Support</h3>
-            <p>
-                New background services and Server-Sent Events support added for real-time
-                application features.
-            </p>
-        </article>
-    </div>
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Dec 5, 2025</div>
+                                <h3>BackgroundService & SSE Support</h3>
+                                <p>
+                                    New background services and Server-Sent Events support added for real-time
+                                    application features.
+                                </p>
+                            </article>
+                        </div>
 
-    <div class="swiper-slide">
-        <article class="news-card">
-            <div class="news-date">Nov 28, 2025</div>
-            <h3>ContextAccessor Enhanced</h3>
-            <p>
-                Enhanced context access and configuration management for better application state
-                handling.
-            </p>
-        </article>
-    </div>
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Nov 28, 2025</div>
+                                <h3>ContextAccessor Enhanced</h3>
+                                <p>
+                                    Enhanced context access and configuration management for better application state
+                                    handling.
+                                </p>
+                            </article>
+                        </div>
 
-    <div class="swiper-slide">
-        <article class="news-card">
-            <div class="news-date">Nov 20, 2025</div>
-            <h3>Quantum Computing Plugin</h3>
-            <p>
-                New plugin for Quantum Computing operations added, expanding framework capabilities
-                to quantum algorithms.
-            </p>
-        </article>
-    </div>-->
+                        <div class="swiper-slide">
+                            <article class="news-card">
+                                <div class="news-date">Nov 20, 2025</div>
+                                <h3>Quantum Computing Plugin</h3>
+                                <p>
+                                    New plugin for Quantum Computing operations added, expanding framework capabilities
+                                    to quantum algorithms.
+                                </p>
+                            </article>
+                        </div>-->
                     </div>
 
                     <!-- News Navigation - Two-line layout -->
@@ -1698,19 +1756,19 @@
                     <div class="footer-info">
                         <div class="version-item">
                             <strong>Framework Version:</strong>
-                            <span>11.9.0</span>
+                            <span>11.10.0</span>
                         </div>
                         <div class="version-item">
                             <strong>Release Date:</strong>
-                            <span>March14, 2026</span>
+                            <span>March 28, 2026</span>
                         </div>
                         <div class="version-item">
                             <strong>Website Version:</strong>
-                            <span>11.0.0</span>
+                            <span>11.1.0</span>
                         </div>
                         <div class="version-item">
                             <strong>Last Updated:</strong>
-                            <span>March 15, 2026</span>
+                            <span>March 28, 2026</span>
                         </div>
                     </div>
                 </div>

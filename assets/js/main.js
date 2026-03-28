@@ -686,10 +686,12 @@ function initMultipleHotAnnouncements() {
         // Close button functionality for each announcement
         if (closeBtn) {
             closeBtn.addEventListener('click', function () {
+                const announcementId = wrapper.dataset.announcementId;
+                const version = wrapper.dataset.version;
                 //wrapper.style.animation = 'slideUp 0.3s ease forwards';
 
                 // Store in localStorage that this specific announcement was closed
-                localStorage.setItem(`hotAnnouncement_${announcementId}_closed`, 'true');
+                localStorage.setItem(`hotAnnouncement_${announcementId}_closed`, version);
 
                 setTimeout(() => {
                     wrapper.classList.add('hidden');
