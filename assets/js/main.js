@@ -49,6 +49,16 @@ function init() {
 
     window.addEventListener('load', updateHeaderSpacing);
     window.addEventListener('resize', updateHeaderSpacing);
+
+    //Force immediate recalculation when tab becomes visible using requestAnimationFrame (which resumes quickly)
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            requestAnimationFrame(() => {
+                updateHeaderSpacing();
+                window.dispatchEvent(new Event('scroll'));
+            });
+        }
+    });
 }
 
 // Theme Management - UPDATED with DOM ready check
